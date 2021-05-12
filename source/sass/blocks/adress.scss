@@ -1,0 +1,65 @@
+.adress {
+  padding-left: 8%;
+
+  @media (max-width: $pre-desktop-width) {
+    padding-left: 18px;
+    grid-area: adress;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-left: 15px;
+    padding-right: 18px;
+    position: relative;
+  }
+}
+
+.adress.container-max {
+  margin: 0;
+}
+
+.adress > h2 {
+  @include text(15px, 16px, 400);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $navy_blue;
+  margin-bottom: 25px;
+
+  @media (max-width: $pre-desktop-width) {
+    margin-top: 39px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-top: 28px;
+    margin-bottom: 32px;
+  }
+}
+
+.adress > p {
+  @include text(15px, 25px, 400);
+  opacity: 0.5;
+  color: $navy_blue;
+}
+
+.adress__list {
+  margin-top: -9px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: -12px;
+  }
+}
+
+.adress__item {
+  margin-bottom: 5px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.adress__link {
+  text-decoration: none;
+  opacity: 0.5;
+  color: $navy_blue;
+  font-family: $text-font;
+}

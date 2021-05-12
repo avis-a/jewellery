@@ -1,0 +1,94 @@
+.socials {
+  padding-top: 14px;
+
+  @media (max-width: $pre-desktop-width) {
+    width: 100%;
+    grid-area: socials;
+    border-bottom: 1px solid $light_grey;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 39px;
+  }
+}
+
+.socials.container-max {
+  margin: 0;
+}
+
+.socials__wrapper {
+  @media (max-width: $pre-desktop-width) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+}
+
+.socials__logo {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 78px;
+  }
+}
+
+.socials__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 46px;
+
+  @media (max-width: $desktop-width) {
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+  }
+}
+
+.socials__item {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.socials__list::before {
+  @media (max-width: $desktop-width) {
+    @include pseudo($display: block, $pos: absolute, $content: "1999-2018 SD Service Devices");
+    @include text(13px, 24px, 400);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $navy_blue;
+    opacity: 0.5;
+    font-family: $text-font;
+    top: 3px;
+    right: 166.5%;
+    width: 233px;
+  }
+
+  @media (max-width: $tablet-width) {
+    top: -55px;
+    right: -56.5%;
+  }
+}
+
+.socials__item:not(:first-child) {
+  margin-left: 16px;
+
+  @media (max-width: $desktop-width) {
+    margin-left: 14px;
+  }
+}
