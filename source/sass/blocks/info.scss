@@ -1,181 +1,145 @@
 .info {
   color: $basic_white;
-  padding-top: 15%;
-  padding-bottom: 14.3%;
-  margin-top: -100px;
-  background-image: url("../img/info-background.jpg");
+  background-image: url("../img/intro-main-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: 100% 100%;
-  background-color: $navy_blue;
+  background-color: $basic_color;
   overflow: hidden;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/info-background-2x.jpg");
-  }
-
-  @media (max-width: $desktop-width) {
-    padding-top: 22.5%;
-    padding-bottom: 21.3%;
-  }
-
-  @media (max-width: $tablet-width) {
-    padding-top: 25.5%;
-    padding-bottom: 22%;
-  }
-}
-
-.info__container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  position: relative;
-}
-
-.info__container img {
-  @include pseudo($display: block, $pos: absolute, $content: "");
-  right: -72px;
-  top: -160px;
-  width: 50%;
-  height: auto;
-
-  @media (max-width: $desktop-width) {
-    right: -2px;
-    top: -150px;
-    width: auto;
-  }
-
-  @media (max-width: $tablet-width) {
-    right: 0;
-    top: -49px;
-    z-index: 0;
+    background-image: url("../img/intro-main-desktop-2x.jpg");
   }
 }
 
 .info__wrapper {
-  width: 51.5%;
-
-  @media (max-width: $desktop-width) {
-    width: 69.5%;
-    padding-left: 63px;
-  }
-
-  @media (max-width: $tablet-width) {
-    padding-left: 0;
-    width: 100%;
-  }
+  margin: 0 auto;
 }
 
-.info__wrapper > h1 {
-  @include text(80px, 94px, 700);
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  margin-top: 39px;
-  margin-bottom: 25px;
+// .info__wrapper {
+//   width: 51.5%;
 
-  @media (max-width: $desktop-width) {
-    @include text(60px, 70px, 700);
-    margin-bottom: 27px;
-  }
+//   @media (max-width: $desktop-width) {
+//     width: 69.5%;
+//     padding-left: 63px;
+//   }
 
-  @media (max-width: $tablet-width) {
-    @include text(40px, 47px, 700);
-    position: relative;
-    margin-top: 237px;
-    z-index: 1;
-  }
-}
+//   @media (max-width: $tablet-width) {
+//     padding-left: 0;
+//     width: 100%;
+//   }
+// }
 
-.info__wrapper > p {
-  @include text(22px, 34px, 400);
-  position: relative;
-  padding-left: 94px;
-  margin-bottom: 44px;
+// .info__wrapper > h1 {
+//   @include text(80px, 94px, 700);
+//   letter-spacing: 0.07em;
+//   text-transform: uppercase;
+//   margin-top: 39px;
+//   margin-bottom: 25px;
 
-  @media (max-width: $desktop-width) {
-    @include text(18px, 28px, 400);
-    padding-left: 51px;
-    margin-bottom: 56px;
-  }
+//   @media (max-width: $desktop-width) {
+//     @include text(60px, 70px, 700);
+//     margin-bottom: 27px;
+//   }
 
-  @media (max-width: $tablet-width) {
-    @include text(16px, 25px, 400);
-    margin-bottom: 40px;
-  }
-}
+//   @media (max-width: $tablet-width) {
+//     @include text(40px, 47px, 700);
+//     position: relative;
+//     margin-top: 237px;
+//     z-index: 1;
+//   }
+// }
 
-.info__wrapper > p::before {
-  @include pseudo($display: block, $pos: absolute, $content: "");
-  width: 66px;
-  height: 2px;
-  background-color: $basic_white;
-  left: 0;
-  top: 17px;
+// .info__wrapper > p {
+//   @include text(22px, 34px, 400);
+//   position: relative;
+//   padding-left: 94px;
+//   margin-bottom: 44px;
 
-  @media (max-width: $desktop-width) {
-    width: 33px;
-  }
+//   @media (max-width: $desktop-width) {
+//     @include text(18px, 28px, 400);
+//     padding-left: 51px;
+//     margin-bottom: 56px;
+//   }
 
-  @media (max-width: $tablet-width) {
-    left: 3px;
-    top: 15px;
-  }
-}
+//   @media (max-width: $tablet-width) {
+//     @include text(16px, 25px, 400);
+//     margin-bottom: 40px;
+//   }
+// }
 
-.info__wrapper > a:nth-child(3n) {
-  @include text(16px, 18px, 700);
-  display: block;
-  text-decoration: none;
-  font-family: $caption-font;
-  margin-left: 94px;
-  padding-top: 20px;
-  padding-bottom: 17px;
-  background-color: $background_color;
-  color: $basic_white;
-  border: none;
-  border-radius: 5px;
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  min-height: 55px;
-  max-width: 407px;
+// .info__wrapper > p::before {
+//   @include pseudo($display: block, $pos: absolute, $content: "");
+//   width: 66px;
+//   height: 2px;
+//   background-color: $basic_white;
+//   left: 0;
+//   top: 17px;
 
-  @media (max-width: $desktop-width) {
-    max-width: 379px;
-    margin-left: 51px;
-  }
+//   @media (max-width: $desktop-width) {
+//     width: 33px;
+//   }
 
-  @media (max-width: $tablet-width) {
-    visibility: hidden;
-    margin-left: 0;
-    padding: 0;
+//   @media (max-width: $tablet-width) {
+//     left: 3px;
+//     top: 15px;
+//   }
+// }
 
-    &::after {
-      @include pseudo($display: block, $pos: absolute, $content: "Бесплатная консультация");
-      visibility: visible;
-      width: 287px;
-      min-height: 55px;
-      border-radius: 5px;
-      padding-top: 20px;
-      padding-bottom: 17px;
-      margin-right: 0;
-      background-color: $background_color;
-      bottom: 0;
-    }
-  }
-}
+// .info__wrapper > a:nth-child(3n) {
+//   @include text(16px, 18px, 700);
+//   display: block;
+//   text-decoration: none;
+//   font-family: $caption-font;
+//   margin-left: 94px;
+//   padding-top: 20px;
+//   padding-bottom: 17px;
+//   background-color: $background_color;
+//   color: $basic_white;
+//   border: none;
+//   border-radius: 5px;
+//   text-align: center;
+//   letter-spacing: 0.05em;
+//   text-transform: uppercase;
+//   min-height: 55px;
+//   max-width: 407px;
 
-.info__wrapper > a:last-child {
-  @include text(14px, 16px, 400);
-  @include pseudo($display: block, $pos: absolute, $content: "");
-  text-decoration: none;
-  color: $basic_white;
-  transform: rotate(-90deg);
-  opacity: 0.5;
-  left: -34px;
-  top: 456px;
+//   @media (max-width: $desktop-width) {
+//     max-width: 379px;
+//     margin-left: 51px;
+//   }
 
-  @media (max-width: $desktop-width) {
-    display: none;
-  }
-}
+//   @media (max-width: $tablet-width) {
+//     visibility: hidden;
+//     margin-left: 0;
+//     padding: 0;
+
+//     &::after {
+//       @include pseudo($display: block, $pos: absolute, $content: "Бесплатная консультация");
+//       visibility: visible;
+//       width: 287px;
+//       min-height: 55px;
+//       border-radius: 5px;
+//       padding-top: 20px;
+//       padding-bottom: 17px;
+//       margin-right: 0;
+//       background-color: $background_color;
+//       bottom: 0;
+//     }
+//   }
+// }
+
+// .info__wrapper > a:last-child {
+//   @include text(14px, 16px, 400);
+//   @include pseudo($display: block, $pos: absolute, $content: "");
+//   text-decoration: none;
+//   color: $basic_white;
+//   transform: rotate(-90deg);
+//   opacity: 0.5;
+//   left: -34px;
+//   top: 456px;
+
+//   @media (max-width: $desktop-width) {
+//     display: none;
+//   }
+// }

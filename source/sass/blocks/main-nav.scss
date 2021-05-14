@@ -1,28 +1,17 @@
+.main-nav {
+  border-top: 1px solid $border_grey;
+  border-bottom: 1px solid $border_grey;
+
+  @media (max-width: $desktop-width) {
+    border: none;
+  }
+}
+
 .main-nav__wrapper {
   display: flex;
   flex-direction: row;
-}
-
-.main-nav__button {
-  @include text(14px, 16px, 700);
-  min-width: 180px;
-  height: 48px;
-  padding: 0;
-  color: $basic_white;
-  background-color: transparent;
-  border: 1px solid $basic_white;
-  border-radius: 5px;
-  font-family: $caption-font;
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  cursor: pointer;
-  text-decoration: none;
-  padding-top: 13px;
-  margin-left: 38px;
-  z-index: 2;
 
   @media (max-width: $desktop-width) {
-    display: none;
+    flex-direction: column;
   }
 }

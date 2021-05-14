@@ -1,0 +1,13 @@
+.info-list {
+  display: none;
+
+  @media (max-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.info-list__link {
+  @include text(18px, 23px, 500);
+  color: $basic_white;
+  text-decoration: none;
+}

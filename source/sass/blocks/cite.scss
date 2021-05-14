@@ -1,70 +1,70 @@
-.cite {
-  grid-area: cite;
-  padding-left: 15.8%;
+// .cite {
+//   grid-area: cite;
+//   padding-left: 15.8%;
 
-  @media (max-width: $pre-desktop-width) {
-    padding-left: 0;
-    order: unset;
-    margin-left: unset;
-    margin-right: unset;
-  }
+//   @media (max-width: $pre-desktop-width) {
+//     padding-left: 0;
+//     order: unset;
+//     margin-left: unset;
+//     margin-right: unset;
+//   }
 
-  @media (max-width: $tablet-width) {
-    border-bottom: 1px solid $border_color_footer;
-  }
-}
+//   @media (max-width: $tablet-width) {
+//     border-bottom: 1px solid $border_color_footer;
+//   }
+// }
 
-.cite__container {
-  @media (max-width: $tablet-width) {
-    position: relative;
-  }
-}
+// .cite__container {
+//   @media (max-width: $tablet-width) {
+//     position: relative;
+//   }
+// }
 
-.cite__container.container-max {
-  @media (max-width: $desktop-width) {
-    margin: 0;
-  }
-}
+// .cite__container.container-max {
+//   @media (max-width: $desktop-width) {
+//     margin: 0;
+//   }
+// }
 
-.cite__container > h2 {
-  @include text(15px, 16px, 400);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: $navy_blue;
-  margin-bottom: 26px;
+// .cite__container > h2 {
+//   @include text(15px, 16px, 400);
+//   letter-spacing: 0.05em;
+//   text-transform: uppercase;
+//   color: $navy_blue;
+//   margin-bottom: 26px;
 
-  @media (max-width: $pre-desktop-width) {
-    margin-top: 39px;
-  }
+//   @media (max-width: $pre-desktop-width) {
+//     margin-top: 39px;
+//   }
 
-  @media (max-width: $tablet-width) {
-    margin-top: 29px;
-  }
-}
+//   @media (max-width: $tablet-width) {
+//     margin-top: 29px;
+//   }
+// }
 
-.cite__list {
-  columns: 2;
-  column-gap: 19px;
+// .cite__list {
+//   columns: 2;
+//   column-gap: 19px;
 
-  @media (max-width: $pre-desktop-width) {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-}
+//   @media (max-width: $pre-desktop-width) {
+//     display: flex;
+//     flex-direction: column;
+//     flex-wrap: wrap;
+//   }
+// }
 
-.cite__item {
-  cursor: pointer;
+// .cite__item {
+//   cursor: pointer;
 
-  &:hover {
-    opacity: 0.5;
-  }
-}
+//   &:hover {
+//     opacity: 0.5;
+//   }
+// }
 
-.cite__link {
-  @include text(15px, 25px, 400);
-  text-decoration: none;
-  opacity: 0.5;
-  color: $navy_blue;
-  font-family: $text-font;
-}
+// .cite__link {
+//   @include text(15px, 25px, 400);
+//   text-decoration: none;
+//   opacity: 0.5;
+//   color: $navy_blue;
+//   font-family: $text-font;
+// }
