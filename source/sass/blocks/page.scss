@@ -212,15 +212,18 @@
 
 .page__login,
 .page__cart {
+  text-decoration: none;
   color: $medium_black;
 }
 
 .page__footer {
-  padding-top: 48px;
+  @include padding(100px,100px);
   flex-shrink: 0;
+  background-color: $basic_black;
+  color: $basic_white;
 
   @media (max-width: $desktop-width) {
-    padding-top: 6px;
+    @include padding(60px,60px);
   }
 }
 

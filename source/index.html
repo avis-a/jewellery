@@ -24,7 +24,7 @@
   <div class="page__wrapper">
     <header class="page__header page__opened page__nojs">
       <div class="page__nav container">
-        <a class="page__logo">
+        <a class="page__logo" href="#">
           <svg width="66" height="66">
             <use xlink:href="img/sprite.svg#icon-logo"></use>
           </svg>
@@ -39,26 +39,26 @@
           <label class="visually-hidden" for="search">Type here to search</label>
           <input id="search" type="text" name="search" placeholder="Type here to search">
         </div>
-        <a class="page__login">Login</a>
-        <a class="page__cart">Cart 0</a>
+        <a class="page__login" href="#">Login</a>
+        <a class="page__cart" href="#">Cart 0</a>
       </div>
       <nav class="main-nav">
         <div class="main-nav__wrapper container">
           <ul class="main-nav__list site-list list">
             <li class="site-list__item">
-              <a class="site-list__link" href="">What’s new</a>
+              <a class="site-list__link" href="#">What’s new</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="">Chokers</a>
+              <a class="site-list__link" href="#">Chokers</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="">Necklaces</a>
+              <a class="site-list__link" href="#">Necklaces</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="">Rings</a>
+              <a class="site-list__link" href="#">Rings</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="">Earrings</a>
+              <a class="site-list__link" href="#">Earrings</a>
             </li>
           </ul>
           <ul class="main-nav-info info-list list">
@@ -86,105 +86,130 @@
         </div>
       </section>
 
-      <!-- <section class="about container" id="about">
-        <h2 class="visually-hidden">Наши преимущества</h2>
-        <ul class="about__list list">
-          <li class="about__item about__item--stopwatch">
-            <h3>Оперативные сроки</h3>
-            <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять
-              заказы плат и комплектующих в самые короткие сроки.</p>
+      <section class="slider container">
+        <h2>New In</h2>
+        <p>Shop Now</p>
+        <ul class="slider__list list">
+          <li class="slider__item">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="./img/purple-gemstone-necklace-mobile.webp, ./img/purple-gemstone-necklace-mobile-2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="./img/purple-gemstone-necklace-tablet.webp, ./img/purple-gemstone-necklace-tablet-2x.webp 2x">
+              <source type="image/webp"
+                srcset="./img/purple-gemstone-necklace-desktop.webp, ./img/purple-gemstone-necklace-desktop-2x.webp 2x">
+              <!-- 1x: 270px; 2x: 540px -->
+              <img width="270" height="284" src="./img/purple-gemstone-necklace-desktop.jpg"
+                srcset="./img/purple-gemstone-necklace-desktop@2x.jpg 2x" alt="Necklace with amethyst">
+            </picture>
+            <h3>Necklace with amethyst</h3>
+            <p>&dollar; 145</p>
           </li>
-          <li class="about__item about__item--providers">
-            <h3>Крупные поставщики</h3>
-            <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
-              Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
+          <li class="slider__item">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="./img/layered-choker-necklace-mobile.webp, ./img/layered-choker-necklace-mobile-2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="./img/layered-choker-necklace-tablet.webp, ./img/layered-choker-necklace-tablet-2x.webp 2x">
+              <source type="image/webp"
+                srcset="./img/layered-choker-necklace-desktop.webp, ./img/layered-choker-necklace-desktop-2x.webp 2x">
+              <!-- 1x: 270px; 2x: 540px -->
+              <img width="270" height="284" src="./img/layered-choker-necklace-desktop.jpg"
+                srcset="./img/layered-choker-necklace-desktop-2x.jpg 2x" alt="Layered сhoker">
+            </picture>
+            <h3>Layered сhoker</h3>
+            <p>&dollar; 115</p>
           </li>
-          <li class="about__item about__item--detective">
-            <h3>Полная конфиденциальность</h3>
-            <p>По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
+          <li class="slider__item">
+            <picture>
+              <source type="image/webp"
+                srcset="./img/dainty-gold-necklace-desktop.webp, ./img/dainty-gold-necklace-desktop-2x.webp 2x">
+              <!-- 1x: 270px; 2x: 540px -->
+              <img width="270" height="284" src="./img/dainty-gold-necklace-desktop.jpg"
+                srcset="./img/dainty-gold-necklace-desktop-2x.jpg 2x" alt="Gold chain">
+            </picture>
+            <h3>Gold chain</h3>
+            <p>&dollar; 215</p>
           </li>
-          <li class="about__item about__item--price">
-            <h3>Персонализация стоимости</h3>
-            <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас
-              устраивает.</p>
+          <li class="slider__item">
+            <picture>
+              <source type="image/webp"
+                srcset="./img/galaxy-earrings-desktop.webp, ./img/galaxy-earrings-desktop-2x.webp 2x">
+              <!-- 1x: 270px; 2x: 540px -->
+              <img width="270" height="284" src="./img/galaxy-earrings-desktop.jpg"
+                srcset="./img/galaxy-earrings-desktop-2x.jpg 2x" alt="Galaxy earrings">
+            </picture>
+            <h3>Galaxy earrings</h3>
+            <p>&dollar; 95</p>
           </li>
         </ul>
-        <div class="about__wrapper">
-          <picture>
-            <source type="image/webp" media="(max-width: 1023px)"
-              srcset="./img/year-tablet.webp, ./img/year-tablet-2x.webp 2x">
-            <source type="image/webp" srcset="./img/year-desktop.webp, ./img/year-desktop-2x.webp 2x">
-            1x: 342px; 2x: 684px
-            <img width="220" height="317" src="./img/year-desktop.png" srcset="./img/year-desktop-2x.png 2x" alt="2005">
-          </picture>
-          <div class="about__text">
-            <h2>О компании</h2>
-            <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с
-              1997
-              года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-            <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
-              Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог
-              (РЖД),
-              РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
-              светотехники России.
-            </p>
-            <a class="button" href="#">Подробнее</a>
-          </div>
-        </div>
-      </section> -->
+      </section>
 
-      <!-- <section class="types" id="types">
-        <div class="types__wrapper container">
-          <h2>Service Device предлагает следующие товары и услуги</h2>
-          <ul class="types__list list">
-            <li class="types__item types__item--produce">
-              <a class="types__link" href="#">
-                <p>Производство печатных плат</p>
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)"
-                    srcset="./img/produce-mobile.webp, ./img/produce-mobile-2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)"
-                    srcset="./img/produce-tablet.webp, ./img/produce-tablet-2x.webp 2x">
-                  <source type="image/webp" srcset="./img/produce-desktop.webp, ./img/produce-desktop-2x.webp 2x">
-                  1x: 342px; 2x: 684px
-                  <img width="370" height="620" src="./img/produce-desktop.png" srcset="./img/produce-desktop-2x.png 2x"
-                    alt="Производство печатных плат">
-                </picture>
-              </a>
-            </li>
-            <li class="types__item types__item--edit">
-              <a class="types__link" href="#">
-                <p>Монтаж печатных плат</p>
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)"
-                    srcset="./img/edit-mobile.webp, ./img/edit-mobile-2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)"
-                    srcset="./img/edit-tablet.webp, ./img/edit-tablet-2x.webp 2x">
-                  <source type="image/webp" srcset="./img/edit-desktop.webp, ./img/edit-desktop-2x.webp 2x">
-                  1x: 342px; 2x: 684px
-                  <img width="370" height="620" src="./img/edit-desktop.png" srcset="./img/edit-desktop-2x.png 2x"
-                    alt="Монтаж печатных плат">
-                </picture>
-              </a>
-            </li>
-            <li class="types__item types__item--lighting">
-              <a class="types__link" href="#">
-                <p>Комплектующие для светотехники</p>
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)"
-                    srcset="./img/lighting-mobile.webp, ./img/lighting-mobile-2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)"
-                    srcset="./img/lighting-tablet.webp, ./img/lighting-tablet-2x.webp 2x">
-                  <source type="image/webp" srcset="./img/lighting-desktop.webp, ./img/lighting-desktop-2x.webp 2x">
-                  1x: 342px; 2x: 684px
-                  <img width="370" height="620" src="./img/lighting-desktop.png"
-                    srcset="./img/lighting-desktop-2x.png 2x" alt="Комплектующие для светотехники">
-                </picture>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section> -->
+      <section class="blog container">
+        <h2>Blog</h2>
+        <p>Read All</p>
+        <ul class="blog__list list">
+          <li class="blog__item">
+            <a class="blog__link" href="#">
+              <div class="blog__text">
+                <time datetime="2019-09-30 00:00">September 30, 2019</time>
+                <p>How to care for your jewellery</p>
+                <span>Read Article</span>
+              </div>
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="./img/blog-care-mobile.webp, ./img/blog-care-mobile-2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="./img/blog-care-tablet.webp, ./img/blog-care-tablet-2x.webp 2x">
+                <source type="image/webp" srcset="./img/blog-care-desktop.webp, ./img/blog-care-desktop-2x.webp 2x">
+                <!-- 1x: 285px; 2x: 570px -->
+                <img width="285" height="300" src="./img/blog-care-desktop.jpg"
+                  srcset="./img/blog-care-desktop-2x.jpg 2x" alt="How to care for your jewellery">
+              </picture>
+            </a>
+          </li>
+          <li class="blog__item">
+            <a class="blog__link" href="#">
+              <div class="blog__text">
+                <time datetime="2019-09-16 00:00">September 16, 2019</time>
+                <p>AW 19 trends</p>
+                <span>Read Article</span>
+              </div>
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="./img/blog-trends-mobile.webp, ./img/blog-trends-mobile-2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="./img/blog-trends-tablet.webp, ./img/blog-trends-tablet-2x.webp 2x">
+                <source type="image/webp"
+                  srcset="./img/blog-trends-desktop.webp, ./img/produblog-trends-desktop-2x.webp 2x">
+                <!-- 1x: 570px; 2x: 1140px -->
+                <img width="570" height="630" src="./img/blog-trends-desktop.jpg"
+                  srcset="./img/blog-trends-desktop-2x.jpg 2x" alt="AW 19 trends">
+              </picture>
+            </a>
+          </li>
+          <li class="blog__item">
+            <a class="blog__link" href="#">
+              <div class="blog__text">
+                <time datetime="2019-09-23 00:00">September 23, 2019</time>
+                <p>Power of crystals</p>
+                <span>Read Article</span>
+              </div>
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="./img/blog-power-mobile.webp, ./img/blog-power-mobile-2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="./img/blog-power-tablet.webp, ./img/blog-power-tablet-2x.webp 2x">
+                <source type="image/webp"
+                  srcset="./img/blog-power-desktop.webp, ./img/produblog-power-desktop-2x.webp 2x">
+                <!-- 1x: 285px; 2x: 570px -->
+                <img width="285" height="300" src="./img/blog-power-desktop.jpg"
+                  srcset="./img/blog-power-desktop-2x.jpg 2x" alt="Power of crystals">
+              </picture>
+            </a>
+          </li>
+        </ul>
+      </section>
 
       <!-- <section class="feedback" id="feedback">
         <form class="feedback__form form container" action="https://echo.htmlacademy.ru/" method="POST">
@@ -225,119 +250,102 @@
     </main>
   </div>
 
-      <!-- <footer class="page__footer">
-    <div class="contacts" id="contacts">
-      <div class="socials container-max">
-        <div class="socials__wrapper">
-          <a class="socials__logo" href="#">
-            <svg width="216" height="52">
-              <use xlink:href="img/sprite.svg#logo-footer"></use>
-            </svg>
-          </a>
-          <ul class="socials__list list">
-            <li class="socials__item">
-              <a class="socials__link socials__link--fb" href="#" aria-label="Facebook">
-                <svg width="27" height="27">
-                  <use xlink:href="img/sprite.svg#icon-fb"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link--ok" href="#" aria-label="Одноклассники">
-                <svg width="27" height="27">
-                  <use xlink:href="img/sprite.svg#icon-ok"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link--vk" href="#" aria-label="VK">
-                <svg width="27" height="27">
-                  <use xlink:href="img/sprite.svg#icon-vk"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+  <footer class="page__footer">
+    <div class="contacts container" id="contacts">
+      <div class="subscribe">
+        <h2>The good stuff in your inbox</h2>
+        <p>News and updates from CH. No spam, we promise.</p>
+        <div class="subscribe__field">
+          <label class="visually-hidden" for="subscribe">Your E-mail</label>
+          <input id="subscribe" type="text" name="subscribe" placeholder="Your E-mail">
+          <button class="subscribe__button button" type="button" aria-label="Sign Up">Sign Up</button>
         </div>
       </div>
       <div class="cite">
-        <div class="cite__container container-max close-area">
-          <h2>Разделы сайта</h2>
-          <button class="cite__button close-button close-button--nojs" id="accordion-button-1" type="button">
-            <span class="visually-hidden">Открыть разделы сайта</span>
-          </button>
+        <div class="cite__container">
           <ul class="cite__list list">
             <li class="cite__item">
               <a class="cite__link" href="#">
-                О компании
+                Ordering & Payment
               </a>
             </li>
             <li class="cite__item">
               <a class="cite__link" href="#">
-                Продукты
+                Terms & Conditions
               </a>
             </li>
             <li class="cite__item">
               <a class="cite__link" href="#">
-                Производство печатных плат
+                Returns & Exchanges
               </a>
             </li>
             <li class="cite__item">
               <a class="cite__link" href="#">
-                Монтаж печатных плат
+                Delivery
               </a>
             </li>
             <li class="cite__item">
               <a class="cite__link" href="#">
-                Комплектующие
+                About CH
               </a>
             </li>
             <li class="cite__item">
               <a class="cite__link" href="#">
-                Доставка
+                Stores & Hours
               </a>
             </li>
             <li class="cite__item">
               <a class="cite__link" href="#">
-                Контакты
+                Jobs
+              </a>
+            </li>
+            <li class="cite__item">
+              <a class="cite__link" href="#">
+                Contact Us
               </a>
             </li>
           </ul>
         </div>
       </div>
-      <div class="adress container-max close-area">
-        <h2>Наш офис</h2>
-        <button class="adress__button close-button close-button--nojs" id="accordion-button-2" type="button">
-          <span class="visually-hidden">Открыть разделы сайта</span>
-        </button>
-        <p>г. Мытищи, Олимпийский проспект, д.10</p>
-        <ul class="adress__list list">
-          <li class="adress__item adress__item--tel">
-            <a class="adress__link adress__link--tel" href="tel:+74955894050">+7 (495) 589-40-50
-            </a>
-          </li>
-          <li class="adress__item adress__item--tel">
-            <a class="adress__link adress__link--tel" href="tel:+79250038767">+7 (925) 003-87-67
-            </a>
-          </li>
-          <li class="adress__item adress__item--tel">
-            <a class="adress__link adress__link--tel" href="tel:+792692608079">+7 (926) 926-080-79
-            </a>
-          </li>
-        </ul>
+      <div class="socials">
+        <div class="socials__wrapper">
+          <ul class="socials__list list">
+            <li class="socials__item">
+              <a class="socials__link socials__link--fb" href="#" aria-label="Facebook">
+                <svg width="8" height="15">
+                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                </svg>
+                Facebook</a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--instagram" href="#" aria-label="Instagram">
+                <svg width="15" height="15">
+                  <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                </svg>
+                Instagram</a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--pinterest" href="#" aria-label="Pinterest">
+                <svg width="15" height="15">
+                  <use xlink:href="img/sprite.svg#icon-pinterest"></use>
+                </svg>
+                Pinterest</a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--twitter" href="#" aria-label="Twitter">
+                <svg width="15" height="13">
+                  <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                </svg>
+                Twitter</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="copyright">
-      <ul class="copyright__list container-max list">
-        <li class="copyright__item">Все права защищены</li>
-        <li class="copyright__item">1999-2018 SD Service Devices</li>
-        <li class="copyright__item">Условия конфиденциальности</li>
-        <li class="copyright__item">Developed by wow studio</li>
-      </ul>
-    </div>
-  </footer> -->
+  </footer>
 
-      <!-- Модальное окно -->
-      <!-- <section class="modal visually-hidden">
+  <!-- Модальное окно -->
+  <!-- <section class="modal visually-hidden">
     <div class="modal__overlay"></div>
     <form class="modal__form" action="https://echo.htmlacademy.ru/" method="POST">
       <div class="modal__container">
@@ -370,7 +378,7 @@
   </section>
 
   <script src="./js/vendor.js"></script> -->
-      <script src="./js/main.js"></script>
+  <script src="./js/main.js"></script>
 
 </body>
 

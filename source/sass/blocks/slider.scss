@@ -1,3 +1,38 @@
+.slider {
+  @include padding(130px,130px);
+  text-align: center;
+  color: $medium_black;
+
+  & > h2 {
+    @include text(34px, 44px, 700);
+  }
+
+  & > p {
+    @include text(16px, 21px, 500);
+    border-bottom: 1px solid $basic_color;
+  }
+}
+
+.slider__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 60px;
+}
+
+.slider__item {
+  text-align: center;
+
+  & > h3 {
+    @include text(16px, 21px, 500);
+    font-family: $text-font;
+  }
+
+  & > p {
+    @include text(14px, 18px, 700);
+  }
+}
+
 // .about {
 //   padding-bottom: 4.5%;
 //   padding-top: 5%;

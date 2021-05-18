@@ -1,20 +1,14 @@
-// .socials {
-//   padding-top: 14px;
+.socials {
+  // padding-top: 14px;
 
-//   @media (max-width: $pre-desktop-width) {
-//     width: 100%;
-//     grid-area: socials;
-//     border-bottom: 1px solid $light_grey;
-//   }
+  @media (max-width: $desktop-width) {
+    grid-area: socials;
+  }
 
-//   @media (max-width: $tablet-width) {
-//     padding-top: 39px;
-//   }
-// }
-
-// .socials.container-max {
-//   margin: 0;
-// }
+  @media (max-width: $tablet-width) {
+    // padding-top: 39px;
+  }
+}
 
 // .socials__wrapper {
 //   @media (max-width: $pre-desktop-width) {
@@ -32,38 +26,46 @@
 //   }
 // }
 
-// .socials__logo {
-//   cursor: pointer;
+.socials__list {
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  // margin-top: 46px;
 
-//   &:hover {
-//     opacity: 0.5;
-//   }
+  @media (max-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    // margin-top: 0;
+    // margin-bottom: 0;
+    // position: relative;
+  }
+}
 
-//   @media (max-width: $tablet-width) {
-//     margin-bottom: 78px;
-//   }
-// }
+.socials__item {
+  cursor: pointer;
+  padding-bottom: 25px;
 
-// .socials__list {
-//   display: flex;
-//   flex-direction: row;
-//   flex-wrap: wrap;
-//   margin-top: 46px;
+  &:hover {
+    opacity: 0.7;
+  }
+}
 
-//   @media (max-width: $desktop-width) {
-//     margin-top: 0;
-//     margin-bottom: 0;
-//     position: relative;
-//   }
-// }
+.socials__link {
+  @include text(16px, 21px, 500);
+  text-decoration: none;
+  color: $basic_white;
+  font-family: $text-font;
 
-// .socials__item {
-//   cursor: pointer;
+  @media (max-width: $tablet-width) {
+    font-size: 0;
+    padding-right: 20px;
 
-//   &:hover {
-//     opacity: 0.7;
-//   }
-// }
+    & > svg {
+      width: 20px;
+      height: 21px;
+    }
+  }
+}
 
 // .socials__list::before {
 //   @media (max-width: $desktop-width) {
@@ -82,13 +84,5 @@
 //   @media (max-width: $tablet-width) {
 //     top: -55px;
 //     right: -56.5%;
-//   }
-// }
-
-// .socials__item:not(:first-child) {
-//   margin-left: 16px;
-
-//   @media (max-width: $desktop-width) {
-//     margin-left: 14px;
 //   }
 // }

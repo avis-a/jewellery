@@ -4,8 +4,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   column-gap: 35px;
-  padding-top: 18px;
-  padding-bottom: 19px;
+  @include padding(18px,19px);
 
   @media (max-width: $desktop-width) {
     flex-direction: column;

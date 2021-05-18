@@ -13,5 +13,10 @@
 
   @media (max-width: $desktop-width) {
     flex-direction: column;
+
+    .page__closed & {
+      position: absolute;
+      top: -500px;
+    }
   }
 }

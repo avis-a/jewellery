@@ -1,3 +1,96 @@
+.blog {
+  padding-bottom: 130px;
+  text-align: center;
+  color: $medium_black;
+
+  & > h2 {
+    @include text(34px, 44px, 700);
+    letter-spacing: 0.03em;
+  }
+
+  & > p {
+    @include text(16px, 21px, 500);
+    border-bottom: 1px solid $basic_color;
+  }
+}
+
+.blog__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "care trend"
+    "power trend";
+  grid-gap: 30px;
+  @include padding(60px, 130px);
+}
+
+.blog__item {
+  cursor: pointer;
+  grid-area: care;
+
+  &:nth-child(3n+2) {
+    grid-area: trend;
+  }
+
+  &:nth-child(3n+3) {
+    grid-area: power;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+}
+
+.blog__link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row-reverse;
+
+  & img {
+    height: 100%;
+  }
+
+  .blog__item:nth-child(3n+2) & {
+    position: relative;
+  }
+
+  .blog__item:nth-child(3n+3) & {
+    flex-direction: row;
+  }
+}
+
+.blog__text {
+  background-color: $light_grey;
+  min-width: 50%;
+  min-height: 300px;
+  @include padding(70px, 70px);
+
+  & > time {
+    @include text(14px, 18px, 500);
+    color: $basic_grey;
+  }
+
+  & > p {
+    @include text(26px, 34px, 600);
+    color: $basic_black;
+    font-family: $caption-font;
+  }
+
+  & > span {
+    @include text(16px, 21px, 500);
+    text-decoration: none;
+    color: $medium_black;
+    font-family: $caption-font;
+    border-bottom: 1px solid $basic_color;
+  }
+
+  .blog__item:nth-child(3n+2) & {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
 // .types {
 //   background-color: $navy_blue;
 //   color: $basic_white;

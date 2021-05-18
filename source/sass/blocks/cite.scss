@@ -1,28 +1,22 @@
-// .cite {
-//   grid-area: cite;
-//   padding-left: 15.8%;
+.cite {
+  // padding-left: 15.8%;
 
-//   @media (max-width: $pre-desktop-width) {
-//     padding-left: 0;
-//     order: unset;
-//     margin-left: unset;
-//     margin-right: unset;
-//   }
+  @media (max-width: $desktop-width) {
+    grid-area: cite;
+    // padding-left: 0;
+    // order: unset;
+    // margin-left: unset;
+    // margin-right: unset;
+  }
 
-//   @media (max-width: $tablet-width) {
-//     border-bottom: 1px solid $border_color_footer;
-//   }
-// }
+  @media (max-width: $tablet-width) {
+    // border-bottom: 1px solid $border_color_footer;
+  }
+}
 
 // .cite__container {
 //   @media (max-width: $tablet-width) {
 //     position: relative;
-//   }
-// }
-
-// .cite__container.container-max {
-//   @media (max-width: $desktop-width) {
-//     margin: 0;
 //   }
 // }
 
@@ -42,29 +36,33 @@
 //   }
 // }
 
-// .cite__list {
-//   columns: 2;
-//   column-gap: 19px;
+.cite__list {
+  columns: 2;
+  column-gap: 67px;
 
-//   @media (max-width: $pre-desktop-width) {
-//     display: flex;
-//     flex-direction: column;
-//     flex-wrap: wrap;
-//   }
-// }
+  @media (max-width: $tablet-width) {
+    column-gap: 87px;
+  }
 
-// .cite__item {
-//   cursor: pointer;
+  @media (max-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
 
-//   &:hover {
-//     opacity: 0.5;
-//   }
-// }
+.cite__item {
+  cursor: pointer;
+  padding-bottom: 25px;
 
-// .cite__link {
-//   @include text(15px, 25px, 400);
-//   text-decoration: none;
-//   opacity: 0.5;
-//   color: $navy_blue;
-//   font-family: $text-font;
-// }
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.cite__link {
+  @include text(16px, 21px, 500);
+  text-decoration: none;
+  color: $basic_white;
+  font-family: $text-font;
+}
