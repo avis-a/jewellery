@@ -7,9 +7,12 @@
     @include text(34px, 44px, 700);
   }
 
-  & > p {
+  & > a {
     @include text(16px, 21px, 500);
     border-bottom: 1px solid $basic_color;
+    text-decoration: none;
+    color: $medium_black;
+    cursor: pointer;
   }
 }
 

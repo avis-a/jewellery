@@ -1,5 +1,4 @@
 .blog {
-  padding-bottom: 130px;
   text-align: center;
   color: $medium_black;
 
@@ -8,32 +7,48 @@
     letter-spacing: 0.03em;
   }
 
-  & > p {
+  & > a {
     @include text(16px, 21px, 500);
     border-bottom: 1px solid $basic_color;
+    text-decoration: none;
+    color: $medium_black;
+    cursor: pointer;
   }
 }
 
 .blog__list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "care trend"
-    "power trend";
-  grid-gap: 30px;
+  columns: 2;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr;
+  // grid-template-areas:
+  //   "care trend"
+  //   "power trend";
+  // grid-gap: 30px;
   @include padding(60px, 130px);
+
+  @media (max-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .blog__item {
   cursor: pointer;
-  grid-area: care;
+  margin-bottom: 30px;
+  background-color: $light_grey;
+  // margin-right: 30px;
+  // grid-area: care;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 50px;
+  }
 
   &:nth-child(3n+2) {
-    grid-area: trend;
+    // grid-area: power;
   }
 
   &:nth-child(3n+3) {
-    grid-area: power;
+    // grid-area: trend;
   }
 
   &:hover,
@@ -47,24 +62,56 @@
   display: flex;
   flex-direction: row-reverse;
 
+  @media (max-width: $tablet-width) {
+    flex-direction: column-reverse;
+  }
+
   & img {
     height: 100%;
+
+    @media (max-width: $desktop-width) {
+      min-width: 100%;
+    }
+
+    @media (max-width: $tablet-width) {
+      width: 100%;
+    }
   }
 
   .blog__item:nth-child(3n+2) & {
-    position: relative;
+    flex-direction: row;
+
+    @media (max-width: $tablet-width) {
+      flex-direction: column-reverse;
+    }
   }
 
   .blog__item:nth-child(3n+3) & {
-    flex-direction: row;
+    position: relative;
+
+    @media (max-width: $desktop-width) {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    @media (max-width: $tablet-width) {
+      flex-direction: column-reverse;
+    }
   }
 }
 
 .blog__text {
-  background-color: $light_grey;
   min-width: 50%;
-  min-height: 300px;
+  background-color: $light_grey;
   @include padding(70px, 70px);
+
+  @media (max-width: $desktop-width) {
+    @include padding(88px, 88px);
+  }
+
+  @media (max-width: $tablet-width) {
+    @include padding(49px, 49px);
+  }
 
   & > time {
     @include text(14px, 18px, 500);
@@ -85,9 +132,13 @@
     border-bottom: 1px solid $basic_color;
   }
 
-  .blog__item:nth-child(3n+2) & {
+  .blog__item:nth-child(3n+3) & {
     position: absolute;
     bottom: 0;
+
+    @media (max-width: $desktop-width) {
+      position: relative;
+    }
   }
 }
 

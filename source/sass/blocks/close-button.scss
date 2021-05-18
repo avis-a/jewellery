@@ -1,50 +1,41 @@
-// .close-button {
-//   display: none;
+.close-button {
+  @include pseudo($display: block, $pos: absolute, $content: "");
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  top: 50px;
+  right: 50px;
 
-//   @media (max-width: $tablet-width) {
-//     @include pseudo($display: block, $pos: absolute, $content: "");
-//     height: 16px;
-//     width: 16px;
-//     background-color: transparent;
-//     cursor: pointer;
-//     border: 0;
-//     top: 0;
-//     right: 17px;
+  @media (max-width: $tablet-width) {
+    top: 25px;
+    right: 25px;
+  }
 
-//     &::before,
-//     &::after {
-//       @include pseudo($display: block, $pos: absolute, $content: "");
-//       width: 16px;
-//       height: 1px;
-//       top: 7px;
-//       right: 0;
-//       background-color: $border_color_footer;
-//     }
-//   }
-// }
+  &::before{
+    @include pseudo($display: block, $pos: absolute, $content: "");
+    width: 15px;
+    height: 15px;
+    top: 0;
+    right: 0;
+    border-top: 1px solid $basic_color;
+    border-right: 1px solid $basic_color;
+    transform: rotate(-45deg);
+  }
+}
+
+.close-button--closed {
+
+  &.close-button::before {
+    transform: rotate(135deg);
+  }
+
+  & ~ p {
+    display: none;
+  }
+}
 
 // .close-button--nojs.close-button {
-//   @media (max-width: $tablet-width) {
-//     display: none;
-//   }
-// }
-
-// .close-button--closed.close-button::after {
-//   @media (max-width: $tablet-width) {
-//     transform: rotate(-90deg);
-//   }
-// }
-
-// .close-button--closed + .cite__list,
-// .close-button--closed ~ p,
-// .close-button--closed ~ ul {
-//   @media (max-width: $tablet-width) {
-//     display: none;
-//   }
-// }
-
-// .adress__button.close-button {
-//   @media (max-width: $tablet-width) {
-//     top: 29px;
-//   }
+//   display: none;
 // }

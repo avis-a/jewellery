@@ -84,7 +84,7 @@
 
       <section class="slider container">
         <h2>New In</h2>
-        <p>Shop Now</p>
+        <a href="#">Shop Now</a>
         <ul class="slider__list list">
           <li class="slider__item">
             <picture>
@@ -131,7 +131,7 @@
 
       <section class="blog container">
         <h2>Blog</h2>
-        <p>Read All</p>
+        <a href="#">Read All</a>
         <ul class="blog__list list">
           <li class="blog__item">
             <a class="blog__link" href="#">
@@ -152,22 +152,6 @@
           <li class="blog__item">
             <a class="blog__link" href="#">
               <div class="blog__text">
-                <time datetime="2019-09-16 00:00">September 16, 2019</time>
-                <p>AW 19 trends</p>
-                <span>Read Article</span>
-              </div>
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="./img/blog-trends-mobile.webp, ./img/blog-trends-mobile-2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/blog-trends-tablet.webp, ./img/blog-trends-tablet-2x.webp 2x">
-                <source type="image/webp" srcset="./img/blog-trends-desktop.webp, ./img/produblog-trends-desktop-2x.webp 2x">
-                <!-- 1x: 570px; 2x: 1140px -->
-                <img width="570" height="630" src="./img/blog-trends-desktop.jpg" srcset="./img/blog-trends-desktop-2x.jpg 2x" alt="AW 19 trends">
-              </picture>
-            </a>
-          </li>
-          <li class="blog__item">
-            <a class="blog__link" href="#">
-              <div class="blog__text">
                 <time datetime="2019-09-23 00:00">September 23, 2019</time>
                 <p>Power of crystals</p>
                 <span>Read Article</span>
@@ -181,45 +165,146 @@
               </picture>
             </a>
           </li>
+          <li class="blog__item">
+            <a class="blog__link" href="#">
+              <div class="blog__text">
+                <time datetime="2019-09-16 00:00">September 16, 2019</time>
+                <p>AW 19 trends</p>
+                <span>Read Article</span>
+              </div>
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/blog-trends-mobile.webp, ./img/blog-trends-mobile-2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/blog-trends-tablet.webp, ./img/blog-trends-tablet-2x.webp 2x">
+                <source type="image/webp" srcset="./img/blog-trends-desktop.webp, ./img/produblog-trends-desktop-2x.webp 2x">
+                <!-- 1x: 570px; 2x: 1140px -->
+                <img width="570" height="630" src="./img/blog-trends-desktop.jpg" srcset="./img/blog-trends-desktop-2x.jpg 2x" alt="AW 19 trends">
+              </picture>
+            </a>
+          </li>
         </ul>
       </section>
 
-      <!-- <section class="feedback" id="feedback">
-        <form class="feedback__form form container" action="https://echo.htmlacademy.ru/" method="POST">
-          <picture>
-            <source type="image/webp" srcset="./img/form-plane.webp, ./img/form-plane-2x.webp 2x">
-            1x: 342px; 2x: 684px
-            <img width="686" height="641" src="./img/form-plane.png" srcset="./img/form-plane-2x.png 2x"
-              alt="Обратная связь">
-          </picture>
-          <div class="form__container">
-            <h2>Остались вопросы? Задайте их нам!</h2>
-            <p>Мы проконсультируем Вас бесплатно</p>
-            <div class="form__wrapper">
-              <div class="form__row form__row--name">
-                <label class="visually-hidden" for="name">Имя</label>
-                <input id="name" type="text" name="name" placeholder="Имя" required>
-              </div>
-              <div class="form__row form__row--tel">
-                <label class="visually-hidden" for="tel">Телефон</label>
-                <input id="tel" type="tel" name="tel" placeholder="Телефон" required>
-              </div>
-              <div class="form__row form__row--question">
-                <label class="visually-hidden" for="question">Ваш вопрос</label>
-                <input id="question" type="text" name="question" placeholder="Ваш вопрос">
-              </div>
-            </div>
-            <div class="form__footer">
-              <button type="submit" class="form__button button" aria-label="Задать вопрос">Задать вопрос</button>
-              <div class="form__checkbox">
-                <input class="visually-hidden" id="consent" type="checkbox" name="consent"
-                  value="Согласие на обработку персональных данных" checked required>
-                <label for="consent">Я согласен на обработку персональных данных</label>
-              </div>
-            </div>
-          </div>
-        </form>
-      </section>-->
+      <section class="questions container">
+        <div class="questions__container">
+          <h2>Frequently asked questions</h2>
+          <ul class="questions__list list">
+            <li class="questions__item close-area">
+              <button class="questions__button close-button close-button--nojs" id="accordion-button-1" type="button">
+                <span class="visually-hidden">Open question</span>
+              </button>
+              <h3>What materials are the jewellery made of?</h3>
+              <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
+                semiprecious stones and crystals.</p>
+            </li>
+            <li class="questions__item close-area">
+              <button class="questions__button close-button close-button--nojs" id="accordion-button-1" type="button">
+                <span class="visually-hidden">Open question</span>
+              </button>
+              <h3>Which countries do you deliver to?</h3>
+              <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
+                semiprecious stones and crystals.</p>
+            </li>
+            <li class="questions__item close-area">
+              <button class="questions__button close-button close-button--nojs" id="accordion-button-1" type="button">
+                <span class="visually-hidden">Open question</span>
+              </button>
+              <h3>What are the payment methods?</h3>
+              <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
+                semiprecious stones and crystals.</p>
+            </li>
+            <li class="questions__item close-area">
+              <h3>Can I return the jewellery if it didn’t fit me?</h3>
+              <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
+                semiprecious stones and crystals.</p>
+              <button class="questions__button close-button close-button--nojs" id="accordion-button-1" type="button">
+                <span class="visually-hidden">Open question</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="inst container">
+        <h2>&commat;Chjewellery</h2>
+        <a href="#">Follow Us</a>
+        <ul class="inst__list list">
+          <li class="inst__item">
+            <a class="inst__link" href="#">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/inst-mobile-15.webp, ./img/inst-mobile-15@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/inst-tablet-15.webp, ./img/inst-tablet-15@2x.webp 2x">
+                <source type="image/webp" srcset="./img/inst-desktop-15.webp, ./img/inst-desktop-15@2x.webp 2x">
+                <!-- 1x: 230px; 2x: 266px -->
+                <img width="230" height="230" src="./img/inst-desktop-15.jpg" srcset="./img/inst-desktop-15@2x.jpg 2x" alt="Instagram photo">
+              </picture>
+            </a>
+          </li>
+          <li class="inst__item inst__item--big">
+            <a class="inst__link" href="#">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/inst-mobile-10.webp, ./img/inst-mobile-10@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/inst-tablet-10.webp, ./img/inst-tablet-10@2x.webp 2x">
+                <source type="image/webp" srcset="./img/inst-desktop-10.webp, ./img/inst-desktop-10@2x.webp 2x">
+                <!-- 1x: 399px; 2x: 462px -->
+                <img width="399" height="412" src="./img/inst-desktop-10.jpg" srcset="./img/inst-desktop-10@2x.jpg 2x" alt="Instagram photo">
+              </picture>
+            </a>
+          </li>
+          <li class="inst__item inst__item--no-mobile">
+            <a class="inst__link" href="#">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/inst-tablet-11.webp, ./img/inst-tablet-11@2x.webp 2x">
+                <source type="image/webp" srcset="./img/inst-desktop-11.webp, ./img/inst-desktop-11@2x.webp 2x">
+                <!-- 1x: 230px; 2x: 266px -->
+                <img width="230" height="230" src="./img/inst-desktop-11.jpg" srcset="./img/inst-desktop-11@2x.jpg 2x" alt="Instagram photo">
+              </picture>
+            </a>
+          </li>
+          <li class="inst__item inst__item--no-mobile">
+            <a class="inst__link" href="#">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/inst-tablet-13.webp, ./img/inst-tablet-13@2x.webp 2x">
+                <source type="image/webp" srcset="./img/inst-desktop-13.webp, ./img/inst-desktop-13@2x.webp 2x">
+                <!-- 1x: 230px; 2x: 266px -->
+                <img width="230" height="230" src="./img/inst-desktop-13.jpg" srcset="./img/inst-desktop-13@2x.jpg 2x" alt="Instagram photo">
+              </picture>
+            </a>
+          </li>
+          <li class="inst__item">
+            <a class="inst__link" href="#">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/inst-mobile-9.webp, ./img/inst-mobile-9@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/inst-tablet-9.webp, ./img/inst-tablet-9@2x.webp 2x">
+                <source type="image/webp" srcset="./img/inst-desktop-9.webp, ./img/inst-desktop-9@2x.webp 2x">
+                <!-- 1x: 230px; 2x: 266px -->
+                <img width="230" height="150" src="./img/inst-desktop-9.jpg" srcset="./img/inst-desktop-9@2x.jpg 2x" alt="Instagram photo">
+              </picture>
+            </a>
+          </li>
+          <li class="inst__item">
+            <a class="inst__link" href="#">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/inst-mobile-12.webp, ./img/inst-mobile-12@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/inst-tablet-12.webp, ./img/inst-tablet-12@2x.webp 2x">
+                <source type="image/webp" srcset="./img/inst-desktop-12.webp, ./img/inst-desktop-12@2x.webp 2x">
+                <!-- 1x: 230px; 2x: 266px -->
+                <img width="230" height="150" src="./img/inst-desktop-12.jpg" srcset="./img/inst-desktop-12@2x.jpg 2x" alt="Instagram photo">
+              </picture>
+            </a>
+          </li>
+          <li class="inst__item">
+            <a class="inst__link" href="#">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/inst-mobile-14.webp, ./img/inst-mobile-14@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/inst-tablet-14.webp, ./img/inst-tablet-14@2x.webp 2x">
+                <source type="image/webp" srcset="./img/inst-desktop-14.webp, ./img/inst-desktop-14@2x.webp 2x">
+                <!-- 1x: 230px; 2x: 266px -->
+                <img width="230" height="150" src="./img/inst-desktop-14.jpg" srcset="./img/inst-desktop-14@2x.jpg 2x" alt="Instagram photo">
+              </picture>
+            </a>
+          </li>
+        </ul>
+      </section>
     </main>
   </div>
 
