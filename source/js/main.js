@@ -4,6 +4,7 @@
 
   var pageHeader = document.querySelector('.page__header');
   var pageToggle = document.querySelector('.page__toggle');
+  var mainPage = document.querySelector('.page__main');
 
   if (pageHeader && pageToggle) {
     pageHeader.classList.remove('page__opened');

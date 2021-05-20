@@ -18,14 +18,19 @@
   @media (max-width: $desktop-width) {
     padding-top: 17px;
 
-    &.page__opened,
-    &.page__nojs {
+    &.page__opened {
       @include pseudo($display: block, $pos: absolute, $content: "");
       min-height: 105vh;
       width: 100%;
       top: 0;
       border: none;
       background-color: $basic_color;
+      z-index: 3;
+
+      &.page__nojs {
+        position: relative;
+        min-height: auto;
+      }
     }
 
     @media (max-width: $tablet-width) {
@@ -104,6 +109,7 @@
   position: relative;
 
   @media (max-width: $desktop-width) {
+
     .page__opened &,
     .page__nojs & {
       width: 100%;
@@ -145,6 +151,7 @@
   margin-left: auto;
 
   @media (max-width: $desktop-width) {
+
     .page__opened &,
     .page__nojs & {
       @include text(18px, 23px, 500);
@@ -161,9 +168,10 @@
   }
 
   @media (max-width: $tablet-width) {
+
     .page__opened &,
     .page__nojs & {
-    left: 15px;
+      left: 15px;
     }
   }
 }
@@ -217,16 +225,17 @@
 }
 
 .page__footer {
-  @include padding(100px,100px);
+  @include padding(100px, 100px);
   flex-shrink: 0;
   background-color: $basic_black;
   color: $basic_white;
 
   @media (max-width: $desktop-width) {
-    @include padding(60px,60px);
+    @include padding(60px, 60px);
   }
 }
 
 .page__hidden {
-  overflow: hidden;
+  // overflow: hidden;
+  display: none;
 }
