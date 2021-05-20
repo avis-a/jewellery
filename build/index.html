@@ -84,7 +84,11 @@
 
       <section class="slider container">
         <h2>New In</h2>
-        <a href="#">Shop Now</a>
+        <div class="slider__buttons">
+          <button class="slider__button slider__button--previous button" type="button" aria-label="Previous"></button>
+          <button class="slider__button slider__button--next button" type="button" aria-label="Next"></button>
+        </div>
+        <a href="./catalog.html">Shop Now</a>
         <ul class="slider__list list">
           <li class="slider__item">
             <picture>
@@ -127,6 +131,12 @@
             <p>&dollar; 95</p>
           </li>
         </ul>
+        <div class="slider__controls">
+          <button class="slider-control button button-current" type="button" aria-label="First slide">1</button>
+          <button class="slider-control button" type="button" aria-label="Second slide">2</button>
+          <button class="slider-control button" type="button" aria-label="Third slide">3</button>
+          <button class="slider-control button" type="button" aria-label="Fourth slide">4</button>
+        </div>
       </section>
 
       <section class="blog container">

@@ -61,3 +61,13 @@
     @include text(16px, 21px, 400);
   }
 }
+
+.questions__button {
+  top: 50px;
+  right: 50px;
+
+  @media (max-width: $tablet-width) {
+    top: 25px;
+    right: 25px;
+  }
+}

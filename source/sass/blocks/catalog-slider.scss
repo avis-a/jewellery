@@ -1,0 +1,28 @@
+.catalog-slider {
+  border-top: 1px solid $border_grey;
+  @include padding(40px,80px);
+}
+
+.catalog-slider__wrapper {
+  max-width: 850px;
+  margin-left: auto;
+  position: relative;
+}
+
+.catalog-slider__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.catalog-slider__button {
+  @include text(16px, 21px, 500);
+  color: $medium_black;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.catalog-slider__controls {
+  text-align: center;
+}

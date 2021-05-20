@@ -35,20 +35,6 @@
   text-align: center;
 }
 
-// .info__wrapper {
-//   width: 51.5%;
-
-//   @media (max-width: $desktop-width) {
-//     width: 69.5%;
-//     padding-left: 63px;
-//   }
-
-//   @media (max-width: $tablet-width) {
-//     padding-left: 0;
-//     width: 100%;
-//   }
-// }
-
 .info__wrapper > h1 {
   @include text(45px, 58px, 700);
   letter-spacing: 0.03em;

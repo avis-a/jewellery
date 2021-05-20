@@ -2,6 +2,7 @@
   @include padding(130px,130px);
   text-align: center;
   color: $medium_black;
+  position: relative;
 
   @media (max-width: $desktop-width) {
     @include padding(80px,80px);
@@ -21,6 +22,55 @@
     text-decoration: none;
     color: $medium_black;
     cursor: pointer;
+  }
+}
+
+.slider__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.slider__button {
+  @include pseudo($display: block, $pos: relative);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  // width: 30px;
+  // height: 10px;
+
+  &::before {
+    @include pseudo($display: block, $pos: relative);
+    background-color: $basic_color;
+    width: 29px;
+    height: 1px;
+  }
+
+  &::after {
+    @include pseudo($display: block, $pos: absolute);
+    border-top: 1px solid $basic_color;
+    border-right: 1px solid $basic_color;
+    width: 9px;
+    height: 9px;
+    top: -3px;
+  }
+}
+
+.slider__button--previous {
+  &::after {
+    transform: rotate(-135deg);
+  }
+}
+
+.slider__button--next {
+  &::after {
+    transform: rotate(45deg);
+    right: 5px;
   }
 }
 

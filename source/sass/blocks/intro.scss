@@ -1,0 +1,54 @@
+.intro {
+  color: $basic_white;
+  background-image: url("../img/intro-catalog-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
+  background-color: $basic_color;
+  overflow: hidden;
+  @include padding(102px,102px);
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/intro-catalog-desktop-2x.jpg");
+  }
+
+  @media (max-width: $desktop-width) {
+    background-image: url("../img/intro-catalog-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro-catalog-tablet-2x.jpg");
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/intro-catalog-mobile.jpg");
+    @include padding(89px,89px);
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro-catalog-mobile-2x.jpg");
+    }
+  }
+}
+
+.intro__wrapper {
+  text-align: center;
+}
+
+.intro__wrapper > h1 {
+  @include text(34px, 44px, 700);
+  text-transform: uppercase;
+
+  @media (max-width: $tablet-width) {
+    @include text(34px, 44px, 700);
+  }
+}
+
+.intro__wrapper > p {
+  @include text(22px, 29px, 500);
+  font-family: $caption-font;
+  font-style: italic;
+
+  @media (max-width: $tablet-width) {
+    @include text(22px, 26px, 500);
+  }
+}

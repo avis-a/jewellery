@@ -1,0 +1,7 @@
+.slider-control {
+  @include text(16px, 21px, 500);
+  font-family: $text-font;
+  color: $basic_grey;
+  border: none;
+  background-color: transparent;
+}

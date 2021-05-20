@@ -1,0 +1,48 @@
+.range {
+  position: relative;
+  margin-top: 30px;
+}
+
+.range__scale {
+  height: 1px;
+  width: 100%;
+  background-color: $scale_color;
+}
+
+.range__bar {
+  @include pseudo($display: block, $pos: absolute, $content: "");
+  left: 45px;
+  height: 1px;
+  width: 50%;
+  background-color: $basic_color;
+}
+
+.range__toggle {
+  @include pseudo($display: block, $pos: absolute, $content: "");
+  width: 15px;
+  height: 15px;
+  border: none;
+  background-color: $basic_color;
+  border-radius: 20px;
+  cursor: pointer;
+  top: -8px;
+}
+
+.range__toggle--min {
+  left: 45px;
+}
+
+.range__toggle--max {
+  left: 150px;
+}
+
+.range__controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 10px;
+  // padding-left: 10%;
+  // padding-right: 10%;
+  @include text(14px, 18px, 500);
+  color: $medium_black;
+}

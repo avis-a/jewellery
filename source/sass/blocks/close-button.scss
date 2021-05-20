@@ -5,13 +5,13 @@
   background-color: transparent;
   cursor: pointer;
   border: 0;
-  top: 50px;
-  right: 50px;
+  // top: 50px;
+  // right: 50px;
 
-  @media (max-width: $tablet-width) {
-    top: 25px;
-    right: 25px;
-  }
+  // @media (max-width: $tablet-width) {
+  //   top: 25px;
+  //   right: 25px;
+  // }
 
   &::before{
     @include pseudo($display: block, $pos: absolute, $content: "");
