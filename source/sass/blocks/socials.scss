@@ -3,9 +3,12 @@
 
   @media (max-width: $desktop-width) {
     grid-area: socials;
+    padding-top: 48px;
+    margin-left: auto;
   }
 
   @media (max-width: $tablet-width) {
+    margin-left: unset;
     // padding-top: 39px;
   }
 }

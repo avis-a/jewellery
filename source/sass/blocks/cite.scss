@@ -3,6 +3,7 @@
 
   @media (max-width: $desktop-width) {
     grid-area: cite;
+    padding-top: 48px;
     // padding-left: 0;
     // order: unset;
     // margin-left: unset;
@@ -38,10 +39,10 @@
 
 .cite__list {
   columns: 2;
-  column-gap: 67px;
+  // column-gap: 67px;
 
-  @media (max-width: $tablet-width) {
-    column-gap: 87px;
+  @media (max-width: $desktop-width) {
+    column-gap: 75px;
   }
 
   @media (max-width: $tablet-width) {

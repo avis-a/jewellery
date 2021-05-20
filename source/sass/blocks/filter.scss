@@ -3,6 +3,12 @@
   flex-direction: column;
 }
 
+.filter__form {
+  @media (max-width: $desktop-width) {
+    display: none;
+  }
+}
+
 .filter__container {
   border: 1px solid $basic_color;
 }
@@ -65,6 +71,17 @@
   @include text(16px, 21px, 500);
   margin-top: 35px;
   background-color: transparent;
+}
+
+.filter__button--open {
+  display: none;
+
+  @media (max-width: $desktop-width) {
+    display: block;
+    background-color: $basic_color;
+    color: $basic_white;
+    margin-top: 0;
+  }
 }
 
 .filter__button--submit {

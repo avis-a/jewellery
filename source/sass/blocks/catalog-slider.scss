@@ -1,6 +1,11 @@
 .catalog-slider {
   border-top: 1px solid $border_grey;
   @include padding(40px,80px);
+
+  @media (max-width: $tablet-width) {
+    border: none;
+    @include padding(50px,70px);
+  }
 }
 
 .catalog-slider__wrapper {
@@ -20,7 +25,6 @@
   color: $medium_black;
   border: none;
   background-color: transparent;
-  cursor: pointer;
 }
 
 .catalog-slider__controls {

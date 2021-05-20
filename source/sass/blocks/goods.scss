@@ -3,10 +3,25 @@
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 30px;
   row-gap: 44px;
-}
 
+  @media (max-width: $desktop-width) {
+    row-gap: 40px;
+  }
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+  }
+}
 .goods__item {
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+}
+.goods__link {
   text-align: center;
+  text-decoration: none;
 
   & > h3 {
     @include text(16px, 21px, 500);
