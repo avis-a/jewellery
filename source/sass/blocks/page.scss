@@ -236,6 +236,9 @@
 }
 
 .page__hidden {
-  // overflow: hidden;
   display: none;
+}
+
+.page__overflow {
+  overflow: hidden;
 }
