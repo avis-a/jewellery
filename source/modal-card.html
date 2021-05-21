@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Интернет-магазин украшений">
+    <title>HTML Academy: Jewellery</title>
+    <link href="css/style.min.css" type="text/css" rel="stylesheet">
+    <link rel="preload" href="./fonts/cormorantgaramond-bold-webfont.woff2" as="font" type="font/woff2"
+      crossorigin="anonymous">
+    <link rel="preload" href="./fonts/cormorantgaramond-italic-webfont.woff2" as="font" type="font/woff2"
+      crossorigin="anonymous">
+    <link rel="preload" href="./fonts/cormorantgaramond-mediumitalic-webfont.woff2" as="font" type="font/woff2"
+      crossorigin="anonymous">
+    <link rel="preload" href="./fonts/cormorantgaramond-semibold-webfont.woff2" as="font" type="font/woff2"
+      crossorigin="anonymous">
+    <link rel="preload" href="./fonts/poppins-bold-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/poppins-medium-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/poppins-regular-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  </head>
+
+<body class="page">
+
+  <!-- Модальное окно Card-->
+  <section class="modal-card">
+    <div class="modal-card__overlay"></div>
+    <form class="modal-card__form" action="https://echo.htmlacademy.ru/" method="POST">
+      <div class="modal-card__container">
+        <!-- <button type="button" class="modal-card__button modal-card__button--close" aria-label="Close"
+          tabindex="6"></button> -->
+        <h1>The item was added to your cart</h1>
+        <div class="modal-card__wrapper">
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)"
+              srcset="./img/product-popup-mobile.webp, ./img/product-popup-mobile-2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="./img/product-popup-tablet.webp, ./img/product-popup-tablet-2x.webp 2x">
+            <source type="image/webp" srcset="./img/product-popup-desktop.webp, ./img/product-popup-desktop-2x.webp 2x">
+            <!-- 1x: 84px; 2x: 168px -->
+            <img width="84" height="79" src="./img/product-popup-desktop-2x.jpg"
+              srcset="./img/product-popup-desktop-2x.jpg 2x" alt="Gold Necklace">
+          </picture>
+          <div class="modal-card__info">
+            <h2>Gold Necklace</h2>
+            <p>&dollar; 115</p>
+          </div>
+          <div class="modal-card__counter">
+            <button class="modal-card__count modal-card__count--minus button" aria-label="Minus" tabindex="1"></button>
+            <input type="text" class="quantity" value="1">
+            <button class="modal-card__count modal-card__count--plus button" aria-label="Plus" tabindex="2"></button>
+          </div>
+        </div>
+        <div class="modal-card__footer">
+          <div class="modal-card__sum">
+            <p>You have 1 item in the cart</p>
+            <p>Cart subtotal: &dollar;115</p>
+          </div>
+          <div class="modal-card__buttons">
+            <button type="submit" class="modal-card__button modal-card__button--continue button"
+              aria-label="Continue shopping" tabindex="3">Continue shopping</button>
+            <button type="submit" class="modal-card__button modal-card__button--checkout button" aria-label="Checkout"
+              tabindex="4">Checkout</button>
+          </div>
+        </div>
+        <a href="card.html" class="modal-login__button modal-login__button--back button" aria-label="Back" tabindex="5">Back</a>
+      </div>
+    </form>
+  </section>
+
+  <script src="./js/vendor.js"></script>
+  <script src="./js/main.js"></script>
+
+</body>
+
+</html>

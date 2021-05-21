@@ -101,6 +101,11 @@
       }
     }
   }
+
+  @media (max-width: $desktop-width) {
+    top: 15px;
+    left: 15px;
+  }
 }
 
 .page__search {
@@ -198,6 +203,11 @@
       right: 0;
       left: unset;
     }
+  }
+
+  @media (max-width: $desktop-width) {
+    top: 15px;
+    right: 25px;
   }
 }
 

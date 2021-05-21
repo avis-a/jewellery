@@ -1,0 +1,274 @@
+.modal-card__overlay {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  background-color: $basic_black;
+  opacity: 0.5;
+}
+
+.modal-card__form {
+  background-color: $basic_white;
+  color: $medium_black;
+  @include padding(55px, 55px);
+  max-width: 500px;
+  position: absolute;
+  top: 136px;
+  z-index: 4;
+  left: 0;
+  right: 0;
+  text-align: center;
+  @include push--auto;
+
+  @media (max-width: $desktop-width) {
+    max-width: 502px;
+  }
+
+  @media (max-width: $tablet-width) {
+    max-width: 290px;
+    @include padding(45px, 45px);
+  }
+}
+
+.modal-card__container {
+  &>h1 {
+    @include text(26px, 34px, 700);
+    color: $medium_black;
+    margin-bottom: 55px;
+
+    @media (max-width: $tablet-width) {
+      @include text(24px, 29px, 700);
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.modal-card__wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+  padding-left: 35px;
+  padding-right: 35px;
+
+  @media (max-width: $desktop-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.modal-card__info {
+  color: $medium_black;
+  margin-left: 20px;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 15px;
+  }
+
+  &>h2 {
+    margin-bottom: 20px;
+    @include text(18px, 23px, 700);
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: 15px;
+      @include text(16px, 21px, 700);
+    }
+  }
+
+  &>p {
+    @include text(18px, 23px, 400);
+    margin: 0;
+    text-align: start;
+
+    @media (max-width: $tablet-width) {
+      @include text(16px, 21px, 400);
+    }
+  }
+}
+
+.modal-card__counter {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  width: 20px;
+  position: relative;
+
+  &>input {
+    background-color: transparent;
+    border: none;
+
+    &[value] {
+      @include text(18px, 23px, 400);
+      color: $medium_black;
+      text-align: center;
+    }
+  }
+}
+
+.modal-card__count {
+  background-color: transparent;
+  border: none;
+  width: 20px;
+  height: 20px;
+
+  &::before,
+  &::after {
+    @include pseudo($display: block, $pos: relative, $content: "");
+    width: 14px;
+    height: 2px;
+    background-color: $basic_grey;
+  }
+}
+
+.modal-card__count--minus {
+  &::before {
+    transform: rotate(180deg);
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.modal-card__count--plus {
+  &::after {
+    transform: rotate(90deg);
+    bottom: 1px;
+    left: 0;
+  }
+}
+
+.modal-card__footer {
+  border-top: 1px solid $basic_grey;
+}
+
+.modal-card__sum {
+  @include text(14px, 18px, 400);
+  color: $medium_black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 35px;
+  padding-right: 35px;
+  @include padding(20px, 40px);
+
+  @media (max-width: $desktop-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 25px;
+  }
+
+  &>p {
+    @media (max-width: $tablet-width) {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  & p:nth-child(2n) {
+    font-weight: 500;
+  }
+}
+
+.modal-card__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-bottom: 20px;
+
+  @media (max-width: $desktop-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.modal-card__button {
+  @include text(16px, 21px, 500);
+  border: none;
+  text-align: center;
+  min-height: 68px;
+  min-width: 45%;
+  cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.modal-card__button--continue,
+.modal-card__button--back {
+  background-color: transparent;
+  color: $basic_black;
+  border: 1px solid $basic_color;
+}
+
+.modal-card__button--checkout {
+  background-color: $basic_color;
+  color: $basic_white;
+}
+
+.modal-card__button--back {
+  display: block;
+  padding-top: 25px;
+  text-decoration: none;
+  width: 90%;
+  @include push--auto;
+}
+
+.modal-card__button--close {
+  @include pseudo($display: block, $pos: absolute, $content: "");
+  border: none;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    top: 15px;
+    right: 15px;
+  }
+
+  &::before,
+  &::after {
+    @include pseudo($display: block, $pos: absolute, $content: "");
+    top: 5px;
+    right: 0;
+    width: 14px;
+    height: 2px;
+    background-color: $medium_black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
