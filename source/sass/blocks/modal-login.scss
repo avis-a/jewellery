@@ -1,0 +1,193 @@
+.modal-login__overlay {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  background-color: $basic_black;
+  opacity: 0.5;
+}
+
+.modal-login__form {
+  background-color: $light_grey;
+  color: $basic_grey;
+  @include padding(200px, 60px);
+  padding-left: 45px;
+  padding-right: 45px;
+  max-width: 430px;
+  position: absolute;
+  top: 136px;
+  z-index: 4;
+  left: 0;
+  right: 0;
+  text-align: center;
+  @include push--auto;
+  background-image: url('../img/login-desktop.jpg');
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: 100% auto;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/login-desktop-2x.jpg");
+  }
+
+  @media (max-width: $desktop-width) {
+    background-image: url("../img/login-tablet.jpg");
+    padding-left: 51px;
+    padding-right: 51px;
+    max-width: 442px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/login-tablet-2x.jpg");
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/login-mobile.jpg");
+    max-width: 290px;
+    @include padding(130px, 45px);
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/login-mobile-2x.jpg");
+    }
+  }
+}
+
+.modal-login__container {
+  & > h1 {
+    @include text(34px, 44px, 700);
+    color: $medium_black;
+    margin-bottom: 45px;
+
+    @media (max-width: $desktop-width) {
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: $tablet-width) {
+      @include text(24px, 31px, 700);
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.modal-login__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.modal-login__row {
+  margin-bottom: 40px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 35px;
+  }
+
+  & > input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $medium_black;
+    min-height: 30px;
+    width: 100%;
+  }
+
+  &::placeholder {
+    @include text(14px, 21px, 500);
+    color: $basic_grey;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+}
+
+.modal-login__row--password {
+  margin-bottom: 10px;
+}
+
+.modal-login__forgot {
+  @include text(12px, 18px, 500);
+  color: $basic_grey;
+  text-decoration: none;
+  margin-left: auto;
+}
+
+.modal-login__button--submit,
+.modal-login__button--back {
+  @include text(16px, 21px, 500);
+  background-color: $basic_color;
+  color: $basic_white;
+  border: none;
+  text-align: center;
+  min-height: 68px;
+  min-width: 100%;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.modal-login__button--back {
+  display: block;
+  padding-top: 13px;
+  text-decoration: none;
+}
+
+.modal-login__noaccount {
+  @include text(14px, 21px, 500);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  & > p {
+    margin: 0;
+    margin-right: 5px;
+  }
+
+  & > a {
+    text-decoration: none;
+    color: $medium_black;
+  }
+}
+
+.modal-login__button--close {
+  @include pseudo($display: block, $pos: absolute, $content: "");
+  border: none;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    top: 15px;
+    right: 15px;
+  }
+
+  &::before,
+  &::after {
+    @include pseudo($display: block, $pos: absolute, $content: "");
+    top: 5px;
+    right: 0;
+    width: 14px;
+    height: 2px;
+    background-color: $medium_black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
