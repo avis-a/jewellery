@@ -24,7 +24,7 @@
   <div class="page__wrapper">
     <header class="page__header page__opened page__nojs">
       <div class="page__nav container">
-        <a class="page__logo" href="#">
+        <a class="page__logo" href="./index.html">
           <svg width="66" height="66">
             <use xlink:href="img/sprite.svg#icon-logo"></use>
           </svg>
@@ -76,7 +76,91 @@
       </nav>
     </header>
 
-    <main class="page__main">
+    <main class="page__main container">
+      <h1 class="visually-hidden">Product card</h1>
+      <section class="card">
+        <div class="card__gallery">
+          <ul class="card__carousel img-carousel list">
+            <li class="img-carousel__item active">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="./img/product-active-mobile.webp, ./img/product-active-mobile-2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="./img/product-active-tablet.webp, ./img/product-active-tablet-2x.webp 2x">
+                <source type="image/webp"
+                  srcset="./img/product-active-desktop.webp, ./img/product-active-desktop-2x.webp 2x">
+                <!-- 1x: 470px; 2x: 940px -->
+                <img width="470" height="435" src="./img/product-active-desktop.jpg"
+                  srcset="./img/product-active-desktop-2x.jpg 2x" alt="Product photo">
+              </picture>
+            </li>
+            <li class="img-carousel__item">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="./img/product-1-tablet.webp, ./img/product-1-tablet-2x.webp 2x">
+                <source type="image/webp"
+                  srcset="./img/product-1-desktop.webp, ./img/product-1-desktop-2x.webp 2x">
+                <!-- 1x: 100px; 2x: 200px -->
+                <img width="100" height="125" src="./img/product-1-desktop.jpg"
+                  srcset="./img/product-1-desktop-2x.jpg 2x" alt="Product photo">
+              </picture>
+            </li>
+            <li class="img-carousel__item">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="./img/product-2-tablet.webp, ./img/product-2-tablet-2x.webp 2x">
+                <source type="image/webp"
+                  srcset="./img/product-2-desktop.webp, ./img/product-2-desktop-2x.webp 2x">
+                <!-- 1x: 100px; 2x: 200px -->
+                <img width="100" height="125" src="./img/product-2-desktop.jpg"
+                  srcset="./img/product-2-desktop-2x.jpg 2x" alt="Product photo">
+              </picture>
+            </li>
+            <li class="img-carousel__item">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="./img/product-3-tablet.webp, ./img/product-3-tablet-2x.webp 2x">
+                <source type="image/webp"
+                  srcset="./img/product-3-desktop.webp, ./img/product-3-desktop-2x.webp 2x">
+                <!-- 1x: 100px; 2x: 200px -->
+                <img width="100" height="125" src="./img/product-3-desktop.jpg"
+                  srcset="./img/product-3-desktop-2x.jpg 2x" alt="Product photo">
+              </picture>
+            </li>
+          </ul>
+        </div>
+        <div class="card__wrapper">
+          <h2>Gold Necklace</h2>
+          <p>&dollar; 115</p>
+          <dl class="card__info">
+            <div class="card__row card__row--main">
+              <dt>Description</dt>
+              <dd>Additional info</dd>
+            </div>
+            <div class="card__row">
+              <dt>Metal type</dt>
+              <dd>Gold 585</dd>
+            </div>
+            <div class="card__row">
+              <dt>Stone</dt>
+              <dd>Turquoise</dd>
+            </div>
+            <div class="card__row">
+              <dt>Size</dt>
+              <dd>18” / 20”</dd>
+            </div>
+          </dl>
+          <button class="card__button button" type="submit" aria-label="Add to cart">Add to cart</button>
+          <div class="card__additional">
+            <ul class="card__list list">
+              <li class="card__item">14 Day Returns</li>
+              <li class="card__item">2-Year Warranty</li>
+              <li class="card__item">Free Shipping</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <section class="slider container">
         <h2>You May Also Like</h2>
         <div class="slider__buttons">
@@ -143,214 +227,9 @@
           <button class="slider-control button" type="button" aria-label="Second slide">2</button>
           <button class="slider-control button" type="button" aria-label="Third slide">3</button>
           <button class="slider-control button" type="button" aria-label="Fourth slide">4</button>
+          <button class="slider-control button" type="button" aria-label="Fifth slide">5</button>
+          <button class="slider-control button" type="button" aria-label="Sixth slide">6</button>
         </div>
-      </section>
-
-      <section class="blog container">
-        <h2>Blog</h2>
-        <a href="#">Read All</a>
-        <ul class="blog__list list">
-          <li class="blog__item">
-            <a class="blog__link" href="#">
-              <div class="blog__text">
-                <time datetime="2019-09-30 00:00">September 30, 2019</time>
-                <p>How to care for your jewellery</p>
-                <span>Read Article</span>
-              </div>
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="./img/blog-care-mobile.webp, ./img/blog-care-mobile-2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="./img/blog-care-tablet.webp, ./img/blog-care-tablet-2x.webp 2x">
-                <source type="image/webp" srcset="./img/blog-care-desktop.webp, ./img/blog-care-desktop-2x.webp 2x">
-                <!-- 1x: 285px; 2x: 570px -->
-                <img width="285" height="300" src="./img/blog-care-desktop.jpg"
-                  srcset="./img/blog-care-desktop-2x.jpg 2x" alt="How to care for your jewellery">
-              </picture>
-            </a>
-          </li>
-          <li class="blog__item">
-            <a class="blog__link" href="#">
-              <div class="blog__text">
-                <time datetime="2019-09-23 00:00">September 23, 2019</time>
-                <p>Power of crystals</p>
-                <span>Read Article</span>
-              </div>
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="./img/blog-power-mobile.webp, ./img/blog-power-mobile-2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="./img/blog-power-tablet.webp, ./img/blog-power-tablet-2x.webp 2x">
-                <source type="image/webp"
-                  srcset="./img/blog-power-desktop.webp, ./img/produblog-power-desktop-2x.webp 2x">
-                <!-- 1x: 285px; 2x: 570px -->
-                <img width="285" height="300" src="./img/blog-power-desktop.jpg"
-                  srcset="./img/blog-power-desktop-2x.jpg 2x" alt="Power of crystals">
-              </picture>
-            </a>
-          </li>
-          <li class="blog__item">
-            <a class="blog__link" href="#">
-              <div class="blog__text">
-                <time datetime="2019-09-16 00:00">September 16, 2019</time>
-                <p>AW 19 trends</p>
-                <span>Read Article</span>
-              </div>
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="./img/blog-trends-mobile.webp, ./img/blog-trends-mobile-2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="./img/blog-trends-tablet.webp, ./img/blog-trends-tablet-2x.webp 2x">
-                <source type="image/webp"
-                  srcset="./img/blog-trends-desktop.webp, ./img/produblog-trends-desktop-2x.webp 2x">
-                <!-- 1x: 570px; 2x: 1140px -->
-                <img width="570" height="630" src="./img/blog-trends-desktop.jpg"
-                  srcset="./img/blog-trends-desktop-2x.jpg 2x" alt="AW 19 trends">
-              </picture>
-            </a>
-          </li>
-        </ul>
-      </section>
-
-      <section class="questions container">
-        <div class="questions__container">
-          <h2>Frequently asked questions</h2>
-          <ul class="questions__list list">
-            <li class="questions__item close-area">
-              <button class="questions__button close-button close-button--nojs" id="accordion-button-1" type="button">
-                <span class="visually-hidden">Open question</span>
-              </button>
-              <h3>What materials are the jewellery made of?</h3>
-              <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
-                semiprecious stones and crystals.</p>
-            </li>
-            <li class="questions__item close-area">
-              <button class="questions__button close-button close-button--nojs" id="accordion-button-1" type="button">
-                <span class="visually-hidden">Open question</span>
-              </button>
-              <h3>Which countries do you deliver to?</h3>
-              <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
-                semiprecious stones and crystals.</p>
-            </li>
-            <li class="questions__item close-area">
-              <button class="questions__button close-button close-button--nojs" id="accordion-button-1" type="button">
-                <span class="visually-hidden">Open question</span>
-              </button>
-              <h3>What are the payment methods?</h3>
-              <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
-                semiprecious stones and crystals.</p>
-            </li>
-            <li class="questions__item close-area">
-              <h3>Can I return the jewellery if it didn’t fit me?</h3>
-              <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
-                semiprecious stones and crystals.</p>
-              <button class="questions__button close-button close-button--nojs" id="accordion-button-1" type="button">
-                <span class="visually-hidden">Open question</span>
-              </button>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="inst container">
-        <h2>&commat;Chjewellery</h2>
-        <a href="#">Follow Us</a>
-        <ul class="inst__list list">
-          <li class="inst__item">
-            <a class="inst__link" href="#">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="./img/inst-mobile-15.webp, ./img/inst-mobile-15@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="./img/inst-tablet-15.webp, ./img/inst-tablet-15@2x.webp 2x">
-                <source type="image/webp" srcset="./img/inst-desktop-15.webp, ./img/inst-desktop-15@2x.webp 2x">
-                <!-- 1x: 230px; 2x: 266px -->
-                <img width="230" height="230" src="./img/inst-desktop-15.jpg" srcset="./img/inst-desktop-15@2x.jpg 2x"
-                  alt="Instagram photo">
-              </picture>
-            </a>
-          </li>
-          <li class="inst__item inst__item--big">
-            <a class="inst__link" href="#">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="./img/inst-mobile-10.webp, ./img/inst-mobile-10@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="./img/inst-tablet-10.webp, ./img/inst-tablet-10@2x.webp 2x">
-                <source type="image/webp" srcset="./img/inst-desktop-10.webp, ./img/inst-desktop-10@2x.webp 2x">
-                <!-- 1x: 399px; 2x: 462px -->
-                <img width="399" height="412" src="./img/inst-desktop-10.jpg" srcset="./img/inst-desktop-10@2x.jpg 2x"
-                  alt="Instagram photo">
-              </picture>
-            </a>
-          </li>
-          <li class="inst__item inst__item--no-mobile">
-            <a class="inst__link" href="#">
-              <picture>
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="./img/inst-tablet-11.webp, ./img/inst-tablet-11@2x.webp 2x">
-                <source type="image/webp" srcset="./img/inst-desktop-11.webp, ./img/inst-desktop-11@2x.webp 2x">
-                <!-- 1x: 230px; 2x: 266px -->
-                <img width="230" height="230" src="./img/inst-desktop-11.jpg" srcset="./img/inst-desktop-11@2x.jpg 2x"
-                  alt="Instagram photo">
-              </picture>
-            </a>
-          </li>
-          <li class="inst__item inst__item--no-mobile">
-            <a class="inst__link" href="#">
-              <picture>
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="./img/inst-tablet-13.webp, ./img/inst-tablet-13@2x.webp 2x">
-                <source type="image/webp" srcset="./img/inst-desktop-13.webp, ./img/inst-desktop-13@2x.webp 2x">
-                <!-- 1x: 230px; 2x: 266px -->
-                <img width="230" height="230" src="./img/inst-desktop-13.jpg" srcset="./img/inst-desktop-13@2x.jpg 2x"
-                  alt="Instagram photo">
-              </picture>
-            </a>
-          </li>
-          <li class="inst__item">
-            <a class="inst__link" href="#">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="./img/inst-mobile-9.webp, ./img/inst-mobile-9@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="./img/inst-tablet-9.webp, ./img/inst-tablet-9@2x.webp 2x">
-                <source type="image/webp" srcset="./img/inst-desktop-9.webp, ./img/inst-desktop-9@2x.webp 2x">
-                <!-- 1x: 230px; 2x: 266px -->
-                <img width="230" height="150" src="./img/inst-desktop-9.jpg" srcset="./img/inst-desktop-9@2x.jpg 2x"
-                  alt="Instagram photo">
-              </picture>
-            </a>
-          </li>
-          <li class="inst__item">
-            <a class="inst__link" href="#">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="./img/inst-mobile-12.webp, ./img/inst-mobile-12@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="./img/inst-tablet-12.webp, ./img/inst-tablet-12@2x.webp 2x">
-                <source type="image/webp" srcset="./img/inst-desktop-12.webp, ./img/inst-desktop-12@2x.webp 2x">
-                <!-- 1x: 230px; 2x: 266px -->
-                <img width="230" height="150" src="./img/inst-desktop-12.jpg" srcset="./img/inst-desktop-12@2x.jpg 2x"
-                  alt="Instagram photo">
-              </picture>
-            </a>
-          </li>
-          <li class="inst__item">
-            <a class="inst__link" href="#">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="./img/inst-mobile-14.webp, ./img/inst-mobile-14@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="./img/inst-tablet-14.webp, ./img/inst-tablet-14@2x.webp 2x">
-                <source type="image/webp" srcset="./img/inst-desktop-14.webp, ./img/inst-desktop-14@2x.webp 2x">
-                <!-- 1x: 230px; 2x: 266px -->
-                <img width="230" height="150" src="./img/inst-desktop-14.jpg" srcset="./img/inst-desktop-14@2x.jpg 2x"
-                  alt="Instagram photo">
-              </picture>
-            </a>
-          </li>
-        </ul>
       </section>
     </main>
   </div>
