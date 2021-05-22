@@ -25,7 +25,8 @@
   }
 }
 
-.close-button--closed {
+.acc_active .questions__button,
+.acc_active .filter__accordion {
 
   &.close-button::before {
     transform: rotate(135deg);

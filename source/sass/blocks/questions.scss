@@ -52,14 +52,15 @@
     border-bottom: 1px solid $basic_color;
   }
 
-  & > h3 {
-    @include text(18px, 23px, 500);
-    font-family: $text-font;
-  }
-
   & > p {
     @include text(16px, 21px, 400);
   }
+}
+
+
+.questions__wrapper > h3 {
+  @include text(18px, 23px, 500);
+  font-family: $text-font;
 }
 
 .questions__button {

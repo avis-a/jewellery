@@ -99,7 +99,9 @@ gulp.task("copy", function () {
 gulp.task("libs", function (){
   return gulp.src([
     // перечисляем библиотеки которые необходимы для работы
-    "node_modules/imask/dist/imask.min.js",
+    // "node_modules/accordion-js/dist/accordion.min.js",
+    "node_modules/jquery/dist/jquery.min.js",
+    "node_modules/accordionjs/accordion.min.js",
   ])
   .pipe(concat('vendor.js'))
   .pipe(gulp.dest("build/js"));

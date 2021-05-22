@@ -2,6 +2,13 @@
 
 (function () {
 
+  $(function() {
+    $("#my-accordion").accordionjs({
+      slideSpeed : 150,
+      activeIndex : false,
+    });
+  });
+
   var pageHeader = document.querySelector('.page__header');
   var pageToggle = document.querySelector('.page__toggle');
   var mainPage = document.querySelector('.page__main');
@@ -23,6 +30,13 @@
       }
     });
   }
+
+
+  // let accordion = new Accordion('.test', {
+  //   elementClass: 'questions__item',
+  //   triggerClass: 'questions__button',
+  //   // panelClass: 'question-panel'
+  // });
 
   // var closeButtons = document.querySelectorAll('.close-button');
   // var closeAreas = document.querySelectorAll('.close-area');
