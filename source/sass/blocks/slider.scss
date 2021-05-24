@@ -76,9 +76,7 @@
 
 .slider__list {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 30px;
+  flex-direction: column;
   padding-top: 60px;
 
   @media (max-width: $desktop-width) {
@@ -90,21 +88,66 @@
   }
 }
 
+.slick-track {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+}
+
 .slider__item {
+  max-width: 270px;
+
+  @media (max-width: $desktop-width) {
+    max-width: 324px;
+  }
+
+  @media (max-width: $tablet-width) {
+    max-width: 130px;
+  }
+}
+
+.slider__link {
   text-align: center;
+  text-decoration: none;
+  color: $medium_black;
 
   & > h3 {
     @include text(16px, 21px, 500);
     font-family: $text-font;
+    padding-top: 25px
   }
 
   & > p {
     @include text(14px, 18px, 700);
   }
+
+  & img {
+    margin: 0 auto;
+  }
 }
 
-.slider__item--no-tablet {
-  @media (max-width: $tablet-width) {
-    display: none;
+.slider__controls {
+  padding-top: 20px;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.slider__control {
+  @include text(16px, 21px, 500);
+  font-family: $text-font;
+  color: $basic_grey;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+  color: $medium_black;
   }
+}
+
+.slick-active > button {
+  color: $medium_black;
 }

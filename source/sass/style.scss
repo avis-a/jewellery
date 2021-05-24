@@ -1,4 +1,5 @@
-@import "./normalize";
+@import "../../node_modules/slick-carousel/slick/slick.scss";
+
 @import "./variables";
 @import "./mixins";
 @import "./fonts";
@@ -18,7 +19,6 @@
 @import "blocks/intro";
 @import "blocks/goods";
 @import "blocks/filter";
-@import "blocks/slider-control";
 @import "blocks/catalog-content";
 @import "blocks/catalog-slider";
 @import "blocks/card";
@@ -27,6 +27,7 @@
 @import "blocks/cite";
 @import "blocks/subscribe";
 @import "blocks/questions";
+
 @import "blocks/modal-login";
 @import "blocks/modal-card";
 @import "blocks/button";

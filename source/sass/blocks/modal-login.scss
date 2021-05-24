@@ -28,7 +28,7 @@
   background-size: 100% auto;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/login-desktop-2x.jpg");
+    background-image: url("../img/login-desktop@2x.jpg");
   }
 
   @media (max-width: $desktop-width) {
@@ -38,7 +38,7 @@
     max-width: 442px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/login-tablet-2x.jpg");
+      background-image: url("../img/login-tablet@2x.jpg");
     }
   }
 
@@ -50,7 +50,7 @@
     padding-right: 15px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/login-mobile-2x.jpg");
+      background-image: url("../img/login-mobile@2x.jpg");
     }
   }
 }

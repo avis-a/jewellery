@@ -3,9 +3,36 @@
 (function () {
 
   $(function() {
-    $("#my-accordion").accordionjs({
+    $('#my-accordion').accordionjs({
       slideSpeed : 150,
       activeIndex : false,
+    });
+
+    $('.slider__list').slick({
+      useCSS: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      prevArrow: $('.slider__button--previous'),
+      nextArrow: $('.slider__button--next'),
+
+      dots: true,
+      dotsClass: 'slider__controls',
+      customPaging: function(slick,index) {
+        return `<button class="slider__control" type="button" aria-label="${index + 1} slide">${index + 1}</button>`;
+      },
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: true,
+            dots: true
+          }
+        }
+      ]
     });
   });
 

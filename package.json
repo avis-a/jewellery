@@ -55,6 +55,7 @@
     "accordionjs": "^2.1.2",
     "del": "^4.1.1",
     "imask": "^6.0.7",
-    "jquery": "^3.6.0"
+    "jquery": "^3.6.0",
+    "slick-carousel": "^1.8.1"
   }
 }

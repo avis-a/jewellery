@@ -25,8 +25,26 @@
   color: $medium_black;
   border: none;
   background-color: transparent;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .catalog-slider__controls {
-  text-align: center;
+  @include push--auto;
+}
+
+.catalog-slider__control {
+  @include text(16px, 21px, 500);
+  font-family: $text-font;
+  color: $basic_grey;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+  color: $medium_black;
+  }
 }

@@ -18,7 +18,7 @@ var del = require("del");
 var concat = require('gulp-concat');
 
 gulp.task("css", function () {
-  return gulp.src("source/sass/style.scss")
+  return gulp.src('source/sass/style.scss')
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
@@ -102,6 +102,7 @@ gulp.task("libs", function (){
     // "node_modules/accordion-js/dist/accordion.min.js",
     "node_modules/jquery/dist/jquery.min.js",
     "node_modules/accordionjs/accordion.min.js",
+    "node_modules/slick-carousel/slick/slick.min.js",
   ])
   .pipe(concat('vendor.js'))
   .pipe(gulp.dest("build/js"));

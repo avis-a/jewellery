@@ -23,8 +23,11 @@
     <div class="modal-card__overlay"></div>
     <form class="modal-card__form" action="https://echo.htmlacademy.ru/" method="POST">
       <div class="modal-card__container">
-        <!-- <button type="button" class="modal-card__button modal-card__button--close" aria-label="Close"
-          tabindex="6"></button> -->
+        <a class="page__logo" href="./index.html">
+          <svg width="66" height="66">
+            <use xlink:href="img/sprite.svg#icon-logo"></use>
+          </svg>
+        </a>
         <h1>The item was added to your cart</h1>
         <div class="modal-card__wrapper">
           <picture>
@@ -54,7 +57,7 @@
             <button type="submit" class="modal-card__button modal-card__button--checkout button" aria-label="Checkout" tabindex="4">Checkout</button>
           </div>
         </div>
-        <a href="card.html" class="modal-login__button modal-login__button--back button" aria-label="Back" tabindex="5">Back</a>
+        <a href="card.html" class="modal-card__button modal-card__button--back button" aria-label="Back" tabindex="5">Back</a>
       </div>
     </form>
   </section>
