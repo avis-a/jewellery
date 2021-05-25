@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="Интернет-магазин украшений">
-    <title>HTML Academy: Jewellery</title>
-    <link href="css/style.min.css" type="text/css" rel="stylesheet">
-    <link rel="preload" href="./fonts/cormorantgaramond-bold-webfont.woff2" as="font" type="font/woff2"
-      crossorigin="anonymous">
-    <link rel="preload" href="./fonts/cormorantgaramond-italic-webfont.woff2" as="font" type="font/woff2"
-      crossorigin="anonymous">
-    <link rel="preload" href="./fonts/cormorantgaramond-mediumitalic-webfont.woff2" as="font" type="font/woff2"
-      crossorigin="anonymous">
-    <link rel="preload" href="./fonts/cormorantgaramond-semibold-webfont.woff2" as="font" type="font/woff2"
-      crossorigin="anonymous">
-    <link rel="preload" href="./fonts/poppins-bold-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/poppins-medium-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/poppins-regular-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Интернет-магазин украшений">
+  <title>HTML Academy: Jewellery</title>
+  <link href="css/style.min.css" type="text/css" rel="stylesheet">
+  <link rel="preload" href="./fonts/cormorantgaramond-bold-webfont.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="./fonts/cormorantgaramond-italic-webfont.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="./fonts/cormorantgaramond-mediumitalic-webfont.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="./fonts/cormorantgaramond-semibold-webfont.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="./fonts/poppins-bold-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/poppins-medium-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/poppins-regular-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+</head>
 
 <body class="page">
 
   <!-- Модальное окно Login-->
   <section class="modal-login">
     <div class="modal-login__overlay"></div>
-    <form class="modal-login__form" action="https://echo.htmlacademy.ru/" method="POST">
+    <form class="modal-login__form" id="login-form" action="https://echo.htmlacademy.ru/" method="POST">
       <div class="modal-login__container">
         <a class="page__logo" href="./index.html">
           <svg width="66" height="66">
@@ -53,7 +53,8 @@
           <p>Don’t have an account?</p>
           <a class="modal-login__signin" href="#" aria-label="Sign up" tabindex="5">Sign up</a>
         </div>
-        <a href="index.html" class="modal-login__button modal-login__button--back button" aria-label="Back" tabindex="6">Back</a>
+        <a href="index.html" class="modal-login__button modal-login__button--back button" aria-label="Back"
+          tabindex="6">Back</a>
       </div>
     </form>
   </section>

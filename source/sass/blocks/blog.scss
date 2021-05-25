@@ -5,6 +5,7 @@
   & > h2 {
     @include text(34px, 44px, 700);
     letter-spacing: 0.03em;
+    margin-bottom: 18px;
   }
 
   & > a {
@@ -23,7 +24,7 @@
     "care trend"
     "power trend";
   grid-gap: 30px;
-  @include padding(60px, 130px);
+  @include padding(62px, 130px);
 
   @media (max-width: $desktop-width) {
     display: flex;

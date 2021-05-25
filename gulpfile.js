@@ -99,7 +99,6 @@ gulp.task("copy", function () {
 gulp.task("libs", function (){
   return gulp.src([
     // перечисляем библиотеки которые необходимы для работы
-    // "node_modules/accordion-js/dist/accordion.min.js",
     "node_modules/jquery/dist/jquery.min.js",
     "node_modules/accordionjs/accordion.min.js",
     "node_modules/slick-carousel/slick/slick.min.js",

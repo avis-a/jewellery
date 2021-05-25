@@ -89,6 +89,7 @@
   padding-left: 10%;
   padding-right: 10%;
   position: relative;
+  cursor: pointer;
 
   &:not(:last-child) {
     border-bottom: 1px solid $basic_color;

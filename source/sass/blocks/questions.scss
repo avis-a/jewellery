@@ -32,10 +32,11 @@
 }
 
 .questions__item {
-  @include padding(50px, 50px);
-  padding-left: 38px;
-  padding-right: 393px;
+  // @include padding(50px, 50px);
+  // padding-left: 38px;
+  // padding-right: 393px;
   position: relative;
+  cursor: pointer;
 
   @media (max-width: $desktop-width) {
     padding-left: 50px;
@@ -57,11 +58,20 @@
   }
 }
 
+.questions__wrapper {
+  width: 100%;
+  min-height: 112px;
+}
+
 .questions__wrapper > h3 {
   @include text(18px, 23px, 500);
   font-family: $text-font;
   margin-bottom: 0;
   cursor: pointer;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 38px;
+  margin-right: 393px;
 }
 
 .questions__button {

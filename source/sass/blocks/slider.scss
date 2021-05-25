@@ -1,5 +1,5 @@
 .slider {
-  @include padding(130px,130px);
+  @include padding(112px,120px);
   text-align: center;
   color: $medium_black;
   position: relative;
@@ -14,6 +14,7 @@
 
   & > h2 {
     @include text(34px, 44px, 700);
+    margin-bottom: 19px;
   }
 
   & > a {
@@ -92,7 +93,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 30px;
+  // gap: 30px;
 }
 
 .slider__item {

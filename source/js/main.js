@@ -46,33 +46,48 @@
       $(".modal").addClass("visually-hidden");
     }
 
+    let setOverflow = function () {
+      $(".page").addClass("page__overflow");
+    }
+
+    let removeOverflow = function () {
+      $(".page").removeClass("page__overflow");
+    }
+
     // открытие модалки login
     $('.page__login').on('click', function (evt) {
       evt.preventDefault();
+      $('#modal-login-email').val(localStorage['modal-form-email']);
       $(".modal-login").removeClass("visually-hidden");
+      $('#modal-login-email').trigger('focus');
+      setOverflow();
     });
 
     // открытие модалки card
     $('.card__button').on('click', function (evt) {
       evt.preventDefault();
       $(".modal-card").removeClass("visually-hidden");
+      setOverflow();
     });
 
     // закрытие по крестику
     $('.modal-close').on('click', function (evt) {
       closePopup();
+      removeOverflow();
     });
 
     // закрытие по esc
     $(document).on('keydown', function (evt) {
       if (evt.key === 'Escape') {
         closePopup();
+        removeOverflow();
       }
     });
 
     // закрытие по overlay
     $('.overlay').on('click', function (evt) {
         closePopup();
+        removeOverflow();
     });
 
     // открытие фильтра
@@ -85,6 +100,15 @@
     // закрытие фильтра
     $('.filter__close').on('click', function (evt) {
       $(".filter__form").addClass("filter__form--closed");
+    });
+
+    // localStorage форма
+    $('#modal-login-email').on('input', function (evt) {
+      localStorage['modal-form-email'] = $('#modal-login-email').val();
+    });
+
+    $('#login-form').on('submit', function (evt) {
+      localStorage.removeItem('modal-form-email');
     });
   });
 
