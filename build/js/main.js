@@ -2,10 +2,10 @@
 
 (function () {
 
-  $(function() {
+  $(function () {
     $('#my-accordion').accordionjs({
-      slideSpeed : 150,
-      activeIndex : false,
+      slideSpeed: 150,
+      activeIndex: false,
     });
 
     $('.slider__list').slick({
@@ -19,12 +19,12 @@
 
       dots: true,
       dotsClass: 'slider__controls',
-      customPaging: function(slick,index) {
+      customPaging: function (slick, index) {
         return `<button class="slider__control" type="button" aria-label="${index + 1} slide">${index + 1}</button>`;
       },
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 1023,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
@@ -33,6 +33,58 @@
           }
         }
       ]
+    });
+
+    // кнопка clear all
+    $('.filter__button--clean').on('click', function (evt) {
+      for (let el of $('input:checkbox')) {
+        el.checked = false;
+      }
+    });
+
+    let closePopup = function () {
+      $(".modal").addClass("visually-hidden");
+    }
+
+    // открытие модалки login
+    $('.page__login').on('click', function (evt) {
+      evt.preventDefault();
+      $(".modal-login").removeClass("visually-hidden");
+    });
+
+    // открытие модалки card
+    $('.card__button').on('click', function (evt) {
+      evt.preventDefault();
+      $(".modal-card").removeClass("visually-hidden");
+    });
+
+    // закрытие по крестику
+    $('.modal-close').on('click', function (evt) {
+      closePopup();
+    });
+
+    // закрытие по esc
+    $(document).on('keydown', function (evt) {
+      if (evt.key === 'Escape') {
+        closePopup();
+      }
+    });
+
+    // закрытие по overlay
+    $('.overlay').on('click', function (evt) {
+        closePopup();
+    });
+
+    // открытие фильтра
+    $('.filter__button--open').on('click', function (evt) {
+      evt.preventDefault();
+      $(".filter__form").removeClass("filter__form--closed");
+      $(".filter__form").addClass("filter__form--opened");
+    });
+
+    // закрытие фильтра
+    $('.filter__close').on('click', function (evt) {
+      $(".filter__form").addClass("filter__form--closed");
     });
   });
 

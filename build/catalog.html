@@ -85,18 +85,19 @@
       <section class="catalog-content container">
         <div class="filter">
           <h2 class="visually-hidden">Product filter</h2>
-          <button class="filter__button filter__button--open button" type="button">Filter</button>
-          <form class="filter__form" action="https://echo.htmlacademy.ru/" method="POST">
+          <button class="filter__button filter__button--open button" type="button" aria-label="Open filter">Filter</button>
+          <form class="filter__form filter__form--closed" action="https://echo.htmlacademy.ru/" method="POST">
+            <button class="filter__close" type="button" aria-label="Close filter"></button>
             <div class="filter__container" id="my-accordion">
               <fieldset class="filter__wrapper fielset">
                 <legend class="filter__name">Product</legend>
                 <ul class="filter__list list">
                   <li class="filter__row">
-                    <input class="visually-hidden" id="filter-necklaces" type="checkbox" name="filter-necklaces" checked="">
+                    <input class="visually-hidden" id="filter-necklaces" type="checkbox" name="filter-necklaces">
                     <label for="filter-necklaces">Necklaces</label>
                   </li>
                   <li class="filter__row">
-                    <input class="visually-hidden" id="filter-chokers" type="checkbox" name="filter-chokers" checked="">
+                    <input class="visually-hidden" id="filter-chokers" type="checkbox" name="filter-chokers">
                     <label for="filter-chokers">Chokers</label>
                   </li>
                   <li class="filter__row">
@@ -104,7 +105,7 @@
                     <label for="filter-rings">Rings</label>
                   </li>
                   <li class="filter__row">
-                    <input class="visually-hidden" id="filter-earrings" type="checkbox" name="filter-earrings" checked="">
+                    <input class="visually-hidden" id="filter-earrings" type="checkbox" name="filter-earrings">
                     <label for="filter-earrings">Earrings</label>
                   </li>
                 </ul>
@@ -116,7 +117,7 @@
                 <legend class="filter__name">Material</legend>
                 <ul class="filter__list list">
                   <li class="filter__row">
-                    <input class="visually-hidden" id="filter-gold" type="checkbox" name="filter-gold" checked="">
+                    <input class="visually-hidden" id="filter-gold" type="checkbox" name="filter-gold">
                     <label for="filter-gold">Gold</label>
                   </li>
                   <li class="filter__row">
@@ -136,7 +137,7 @@
                     <label for="filter-pink-flamingo">Pink flamingo</label>
                   </li>
                   <li class="filter__row">
-                    <input class="visually-hidden" id="filter-dreams" type="checkbox" name="filter-dreams" checked="">
+                    <input class="visually-hidden" id="filter-dreams" type="checkbox" name="filter-dreams">
                     <label for="filter-dreams">Dreams</label>
                   </li>
                 </ul>
@@ -164,9 +165,11 @@
                 </button>
               </fieldset>
             </div>
-            <button class="filter__button filter__button--submit button" type="submit" aria-label="Apply">Apply</button>
-            <button class="filter__button filter__button--clean button" type="submit" aria-label="Clear All">Clear
-              All</button>
+            <div class="filter__buttons">
+              <button class="filter__button filter__button--submit button" type="submit" aria-label="Apply">Apply</button>
+              <button class="filter__button filter__button--clean button" type="button" aria-label="Clear All">Clear
+                All</button>
+            </div>
           </form>
         </div>
 
@@ -447,6 +450,34 @@
       </div>
     </div>
   </footer>
+
+  <!-- Модальное окно Login-->
+  <section class="modal modal-login visually-hidden">
+    <div class="modal-login__overlay overlay"></div>
+    <form class="modal-login__form" action="https://echo.htmlacademy.ru/" method="POST">
+      <div class="modal-login__container">
+        <button type="button" class="modal-close modal-login__button modal-login__button--close" aria-label="Close" tabindex="6"></button>
+        <h1>Log In</h1>
+        <div class="modal-login__wrapper">
+          <div class="modal-login__row modal-login__row--email">
+            <label class="visually-hidden" for="modal-login-email"></label>
+            <input id="modal-login-email" type="email" name="modal-login-email" placeholder="Your E-mail" tabindex="1" required="">
+          </div>
+          <div class="modal-login__row modal-login__row--password">
+            <label class="visually-hidden" for="modal-login-password"></label>
+            <input id="modal-login-password" type="password" name="modal-login-password" placeholder="Password" tabindex="2" required="">
+          </div>
+          <a class="modal-login__forgot" href="#" aria-label="Forgot your password?" tabindex="3">Forgot your
+            password?</a>
+        </div>
+        <button type="submit" class="modal-login__button modal-login__button--submit button" aria-label="Log In" tabindex="4">Log In</button>
+        <div class="modal-login__noaccount">
+          <p>Don’t have an account?</p>
+          <a class="modal-login__signin" href="#" aria-label="Sign up" tabindex="4">Sign up</a>
+        </div>
+      </div>
+    </form>
+  </section>
 
   <script src="./js/vendor.js"></script>
   <script src="./js/main.js"></script>

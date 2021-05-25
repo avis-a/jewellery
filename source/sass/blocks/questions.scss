@@ -57,11 +57,11 @@
   }
 }
 
-
 .questions__wrapper > h3 {
   @include text(18px, 23px, 500);
   font-family: $text-font;
   margin-bottom: 0;
+  cursor: pointer;
 }
 
 .questions__button {

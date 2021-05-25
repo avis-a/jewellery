@@ -147,7 +147,7 @@
 }
 
 .modal-card__footer {
-  border-top: 1px solid $basic_grey;
+  border-top: 1px solid $border_grey;
 }
 
 .modal-card__sum {
@@ -208,10 +208,12 @@
 
 .modal-card__button {
   @include text(16px, 21px, 500);
-  border: none;
+  display: block;
+  text-decoration: none;
   text-align: center;
   min-height: 68px;
   min-width: 45%;
+  padding-top: 25px;
   cursor: pointer;
 
   @media (max-width: $tablet-width) {

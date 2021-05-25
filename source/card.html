@@ -461,12 +461,44 @@
     </div>
   </footer>
 
+  <!-- Модальное окно Login-->
+  <section class="modal modal-login visually-hidden">
+    <div class="modal-login__overlay overlay"></div>
+    <form class="modal-login__form" action="https://echo.htmlacademy.ru/" method="POST">
+      <div class="modal-login__container">
+        <button type="button" class="modal-close modal-login__button modal-login__button--close" aria-label="Close"
+          tabindex="6"></button>
+        <h1>Log In</h1>
+        <div class="modal-login__wrapper">
+          <div class="modal-login__row modal-login__row--email">
+            <label class="visually-hidden" for="modal-login-email"></label>
+            <input id="modal-login-email" type="email" name="modal-login-email" placeholder="Your E-mail" tabindex="1"
+              required>
+          </div>
+          <div class="modal-login__row modal-login__row--password">
+            <label class="visually-hidden" for="modal-login-password"></label>
+            <input id="modal-login-password" type="password" name="modal-login-password" placeholder="Password"
+              tabindex="2" required>
+          </div>
+          <a class="modal-login__forgot" href="#" aria-label="Forgot your password?" tabindex="3">Forgot your
+            password?</a>
+        </div>
+        <button type="submit" class="modal-login__button modal-login__button--submit button" aria-label="Log In"
+          tabindex="4">Log In</button>
+        <div class="modal-login__noaccount">
+          <p>Don’t have an account?</p>
+          <a class="modal-login__signin" href="#" aria-label="Sign up" tabindex="4">Sign up</a>
+        </div>
+      </div>
+    </form>
+  </section>
+
   <!-- Модальное окно Card-->
-  <section class="modal-card visually-hidden">
-    <div class="modal-card__overlay"></div>
+  <section class="modal modal-card visually-hidden">
+    <div class="modal-card__overlay overlay"></div>
     <form class="modal-card__form" action="https://echo.htmlacademy.ru/" method="POST">
       <div class="modal-card__container">
-        <button type="button" class="modal-card__button modal-card__button--close" aria-label="Close"
+        <button type="button" class="modal-close modal-card__button modal-card__button--close" aria-label="Close"
           tabindex="5"></button>
         <h1>The item was added to your cart</h1>
         <div class="modal-card__wrapper">
@@ -496,10 +528,9 @@
             <p>Cart subtotal: &dollar;115</p>
           </div>
           <div class="modal-card__buttons">
-            <button type="submit" class="modal-card__button modal-card__button--continue button"
-              aria-label="Continue shopping" tabindex="3">Continue shopping</button>
-            <button type="submit" class="modal-card__button modal-card__button--checkout button" aria-label="Checkout"
-              tabindex="4">Checkout</button>
+            <a class="modal-card__button modal-card__button--continue button" href="/catalog.html" tabindex="3">Continue
+              shopping</a>
+            <a class="modal-card__button modal-card__button--checkout button" href="#" tabindex="4">Checkout</a>
           </div>
         </div>
       </div>

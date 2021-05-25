@@ -5,12 +5,82 @@
 
 .filter__form {
   @media (max-width: $desktop-width) {
-    display: none;
+
+    &.filter__form--opened {
+      @include pseudo($display: block, $pos: absolute, $content: "");
+      min-height: auto;
+      width: 90%;
+      top: 400px;
+      left: 0;
+      @include padding(12px, 40px);
+      background-color: $basic_white;
+      box-shadow: 0 0 10px $medium_black;
+      z-index: 3;
+    }
+
+    &.filter__form--closed {
+      display: none;
+    }
+
+    &.filter__form--nojs {
+      position: relative;
+      width: 100%;
+    }
+  }
+}
+
+.filter__close {
+  display: none;
+
+  @media (max-width: $desktop-width) {
+    @include pseudo($display: block, $pos: absolute, $content: "");
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-color: $medium_black;
+    border-radius: 25px;
+    right: -15px;
+    top: -15px;
+    cursor: pointer;
+    box-shadow: 0 0 10px $medium_black;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+    }
+
+    &::before,
+    &::after {
+      @include pseudo($display: block, $pos: absolute, $content: "");
+      width: 14px;
+      height: 2px;
+      background-color: $basic_white;
+      right: 9px;
+      top: 15px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    .filter__form--nojs & {
+      display: none;
+    }
   }
 }
 
 .filter__container {
   border: 1px solid $basic_color;
+
+  @media (max-width: $desktop-width) {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
 }
 
 .filter__wrapper {
@@ -21,13 +91,17 @@
   position: relative;
 
   &:not(:last-child) {
-  border-bottom: 1px solid $basic_color;
+    border-bottom: 1px solid $basic_color;
   }
 }
 
 .filter__name {
   @include text(16px, 21px, 500);
   color: $medium_black;
+
+  @media (max-width: $desktop-width) {
+    @include text(18px, 23px, 500);
+  }
 }
 
 .filter__list {
@@ -40,7 +114,16 @@
   position: relative;
   cursor: pointer;
 
-  & > label::before {
+  &>label {
+    @include text(14px, 18px, 500);
+    color: $medium_black;
+
+    @media (max-width: $desktop-width) {
+      @include text(16px, 21px, 500);
+    }
+  }
+
+  &>label::before {
     @include pseudo($display: block, $pos: absolute, $content: "");
     width: 15px;
     height: 15px;
@@ -48,9 +131,9 @@
     left: -25px;
   }
 
-  & > input:checked + label::before {
-  background-color: $basic_color;
-}
+  &>input:checked+label::before {
+    background-color: $basic_color;
+  }
 
   &:focus,
   &:hover,
@@ -62,6 +145,13 @@
 .filter__accordion {
   top: -18px;
   right: 25px;
+}
+
+.filter__buttons {
+  @media (max-width: $desktop-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .filter__button {
