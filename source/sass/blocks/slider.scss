@@ -1,11 +1,11 @@
 .slider {
-  @include padding(112px,120px);
+  @include padding(112px,111px);
   text-align: center;
   color: $medium_black;
   position: relative;
 
   @media (max-width: $desktop-width) {
-    @include padding(80px,80px);
+    @include padding(69px,59px);
   }
 
   @media (max-width: $tablet-width) {
@@ -14,7 +14,7 @@
 
   & > h2 {
     @include text(34px, 44px, 700);
-    margin-bottom: 19px;
+    margin-bottom: 4px;
   }
 
   & > a {
@@ -23,6 +23,8 @@
     text-decoration: none;
     color: $medium_black;
     cursor: pointer;
+    display: inline-block;
+    margin-top: 17px;
   }
 }
 
@@ -35,7 +37,15 @@
   @media (max-width: $tablet-width) {
     display: none;
   }
+
+  // &.slider__list--nojs {
+  //   display: none;
+  // }
 }
+
+// .slider__list--nojs.slider__buttons {
+//   background-color: red;
+// }
 
 .slider__button {
   @include pseudo($display: block, $pos: relative);
@@ -89,15 +99,26 @@
   }
 }
 
-.slick-track {
+.slider__list--nojs {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  & > li:not(:nth-child(-n+4)) {
+    display: none;
+  }
+}
+
+.slick-track {
+  display: flex;
+  flex-direction: row;
+  // justify-content: space-between;
   // gap: 30px;
 }
 
 .slider__item {
   max-width: 270px;
+  margin-left: 30px;
 
   @media (max-width: $desktop-width) {
     max-width: 324px;
@@ -108,6 +129,28 @@
   }
 }
 
+.slider__item {
+  &:nth-child(4n+1) {
+    margin-left: 0;
+
+    @media (max-width: $desktop-width) {
+      margin-left: unset;
+    }
+  }
+
+  &:nth-child(2n+1) {
+    @media (max-width: $desktop-width) {
+      margin-left: 0;
+    }
+  }
+}
+
+// .slick-current {
+//   @media (max-width: $desktop-width) {
+//     margin-left: 0;
+//   }
+// }
+
 .slider__link {
   text-align: center;
   text-decoration: none;
@@ -116,7 +159,12 @@
   & > h3 {
     @include text(16px, 21px, 500);
     font-family: $text-font;
-    padding-top: 25px
+    padding-top: 21px;
+    margin-bottom: -11px;
+
+    @media (max-width: $desktop-width) {
+      margin-bottom: -7px;
+    }
   }
 
   & > p {
@@ -125,14 +173,24 @@
 
   & img {
     margin: 0 auto;
+
+    @media (max-width: $desktop-width) {
+      min-width: 324px;
+      min-height: 340px;
+    }
   }
 }
 
 .slider__controls {
-  padding-top: 20px;
+  padding-top: 37px;
+  padding-left: 0;
   list-style-type: none;
   display: flex;
   justify-content: center;
+
+  @media (max-width: $desktop-width) {
+    padding-top: 25px;
+  }
 }
 
 .slider__control {

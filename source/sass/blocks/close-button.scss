@@ -21,7 +21,7 @@
     right: 0;
     border-top: 1px solid $basic_color;
     border-right: 1px solid $basic_color;
-    transform: rotate(-45deg);
+    transform: rotate(135deg);
   }
 }
 
@@ -29,7 +29,7 @@
 .acc_active .filter__accordion {
 
   &.close-button::before {
-    transform: rotate(135deg);
+    transform: rotate(-45deg);
   }
 
   & ~ p {

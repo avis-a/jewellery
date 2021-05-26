@@ -24,11 +24,13 @@
     "care trend"
     "power trend";
   grid-gap: 30px;
-  @include padding(62px, 130px);
+  @include padding(62px, 119px);
 
   @media (max-width: $desktop-width) {
     display: flex;
     flex-direction: column;
+    grid-gap: 50px;
+    padding-bottom: 70px;
   }
 }
 
@@ -40,7 +42,8 @@
   margin: 0;
 
   @media (max-width: $desktop-width) {
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
+    // max-height: 300px;
   }
 
   &:nth-child(3n+2) {
@@ -61,6 +64,7 @@
   text-decoration: none;
   display: flex;
   flex-direction: row-reverse;
+  max-height: 300px;
 
   @media (max-width: $tablet-width) {
     flex-direction: column-reverse;
@@ -70,7 +74,8 @@
     height: 100%;
 
     @media (max-width: $desktop-width) {
-      min-width: 100%;
+      width: 339px;
+      // height: auto;
     }
 
     @media (max-width: $tablet-width) {
@@ -88,10 +93,12 @@
 
   .blog__item:nth-child(3n+3) & {
     position: relative;
+    max-height: 630px;
 
     @media (max-width: $desktop-width) {
       display: flex;
       flex-direction: row-reverse;
+      max-height: 300px;
     }
 
     @media (max-width: $tablet-width) {
@@ -101,12 +108,14 @@
 }
 
 .blog__text {
-  min-width: 50%;
+  width: 50%;
   background-color: $light_grey;
-  @include padding(70px, 70px);
+  // @include padding(65px, 70px);
+  padding-top: 65px;
 
   @media (max-width: $desktop-width) {
-    @include padding(88px, 88px);
+    // @include padding(65px, 88px);
+    padding-top: 65px;
   }
 
   @media (max-width: $tablet-width) {
@@ -122,22 +131,46 @@
     @include text(26px, 34px, 600);
     color: $basic_black;
     font-family: $caption-font;
+    margin-top: 7px;
+    margin-bottom: 35px;
+
+    .blog__item:nth-child(3n+1) & {
+      padding-left: 60px;
+      padding-right: 60px;
+
+      @media (max-width: $desktop-width) {
+        padding-left: 65px;
+        padding-right: 65px;
+      }
+    }
+
+    .blog__item:nth-child(3n+2) & {
+      padding-left: 80px;
+      padding-right: 80px;
+
+      @media (max-width: $desktop-width) {
+        padding-left: 90px;
+        padding-right: 90px;
+      }
+    }
   }
 
   & > span {
     @include text(16px, 21px, 500);
     text-decoration: none;
     color: $medium_black;
-    font-family: $caption-font;
+    font-family: $text-font;
     border-bottom: 1px solid $basic_color;
   }
 
   .blog__item:nth-child(3n+3) & {
     position: absolute;
     bottom: 0;
+    padding-bottom: 107px;
 
     @media (max-width: $desktop-width) {
       position: relative;
+      padding-top: 81px;
     }
   }
 }

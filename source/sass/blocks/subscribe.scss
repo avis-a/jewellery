@@ -2,20 +2,32 @@
   @media (max-width: $desktop-width) {
     grid-area: sub;
   }
-}
 
-.subscribe>h2 {
-  @include text(34px, 44px, 700);
-  letter-spacing: 0.03em;
-}
+  &>h2 {
+    @include text(34px, 44px, 700);
+    letter-spacing: 0.03em;
+    margin-bottom: 0;
+  }
 
-.subscribe>p {
-  @include text(16px, 21px, 400);
-  color: $basic_grey;
+  &>p {
+    @include text(14px, 21px, 400);
+    color: $basic_grey;
+    margin-top: 11px;
+    margin-bottom: 35px;
+
+    @media (max-width: $desktop-width) {
+      padding-top: 0;
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .subscribe__field {
   position: relative;
+
+  @media (max-width: $desktop-width) {
+    padding-right: 63px;
+  }
 
   &>input {
     border: none;
@@ -24,6 +36,10 @@
     width: 100%;
     padding-bottom: 15px;
     color: $basic_grey;
+
+    @media (max-width: $desktop-width) {
+      padding-bottom: 12px;
+    }
 
     &::placeholder {
       @include text(14px, 21px, 500);
@@ -42,6 +58,11 @@
   right: 42px;
   bottom: 15px;
 
+  @media (max-width: $desktop-width) {
+    right: 100px;
+    bottom: 8px;
+  }
+
   &::before {
     @include pseudo($display: block, $pos: absolute);
     background-color: $basic_white;
@@ -49,6 +70,10 @@
     height: 1px;
     bottom: 12px;
     right: -42px;
+
+    @media (max-width: $desktop-width) {
+      right: -36px;
+    }
   }
 
   &::after {
@@ -60,5 +85,9 @@
     height: 9px;
     bottom: 8px;
     right: -42px;
+
+    @media (max-width: $desktop-width) {
+      right: -36px;
+    }
   }
 }

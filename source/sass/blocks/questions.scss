@@ -1,9 +1,9 @@
 .questions {
   color: $medium_black;
-  padding-bottom: 108px;
+  padding-bottom: 107px;
 
   @media (max-width: $desktop-width) {
-    padding-bottom: 84px;
+    padding-bottom: 71px;
   }
 
   @media (max-width: $tablet-width) {
@@ -24,6 +24,7 @@
     @include text(34px, 44px, 700);
     text-align: center;
     letter-spacing: 0.03em;
+    margin-bottom: 49px;
   }
 }
 
@@ -32,21 +33,18 @@
 }
 
 .questions__item {
-  // @include padding(50px, 50px);
-  // padding-left: 38px;
-  // padding-right: 393px;
   position: relative;
   cursor: pointer;
 
   @media (max-width: $desktop-width) {
-    padding-left: 50px;
-    padding-right: 100px;
+    // padding-left: 50px;
+    // padding-right: 100px;
   }
 
-  @media (max-width: $desktop-width) {
-    @include padding(25px, 25px);
-    padding-left: 25px;
-    padding-right: 64px;
+  @media (max-width: $tablet-width) {
+    // @include padding(25px, 25px);
+    // padding-left: 25px;
+    // padding-right: 64px;
   }
 
   &:not(:last-child) {
@@ -55,23 +53,40 @@
 
   & > p {
     @include text(16px, 21px, 400);
+    margin-top: -43px;
+    padding-left: 47px;
+    padding-right: 395px;
+    margin-bottom: 43px;
+
+    @media (max-width: $desktop-width) {
+      padding-left: 49px;
+      padding-right: 53px;
+      margin-top: -19px;
+      margin-bottom: 38px;
+    }
   }
 }
 
 .questions__wrapper {
   width: 100%;
   min-height: 112px;
-}
+  @include padding(47px, 35px);
+  padding-left: 42px;
 
-.questions__wrapper > h3 {
-  @include text(18px, 23px, 500);
-  font-family: $text-font;
-  margin-bottom: 0;
-  cursor: pointer;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: 38px;
-  margin-right: 393px;
+  @media (max-width: $desktop-width) {
+    padding-left: 49px;
+  }
+
+  & > h3 {
+    @include text(18px, 23px, 500);
+    font-family: $text-font;
+    margin-bottom: 5px;
+    cursor: pointer;
+
+    @media (max-width: $desktop-width) {
+      margin-bottom: unset;
+    }
+  }
 }
 
 .questions__button {

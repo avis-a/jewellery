@@ -14,6 +14,7 @@
 
   @media (max-width: $desktop-width) {
     background-image: url("../img/intro-main-tablet.jpg");
+    padding-bottom: 180px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/intro-main-tablet-2x.jpg");

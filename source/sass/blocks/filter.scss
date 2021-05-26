@@ -84,10 +84,10 @@
 }
 
 .filter__wrapper {
-  padding-bottom: 28px;
-  margin-top: 28px;
-  padding-left: 10%;
-  padding-right: 10%;
+  // padding-bottom: 28px;
+  // margin-top: 28px;
+  // padding-left: 10%;
+  // padding-right: 10%;
   position: relative;
   cursor: pointer;
 
@@ -99,6 +99,8 @@
 .filter__name {
   @include text(16px, 21px, 500);
   color: $medium_black;
+  width: 100%;
+  min-height: 68px;
 
   @media (max-width: $desktop-width) {
     @include text(18px, 23px, 500);

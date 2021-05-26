@@ -35,13 +35,10 @@
       ]
     });
 
-    // кнопка clear all
-    $('.filter__button--clean').on('click', function (evt) {
-      for (let el of $('input:checkbox')) {
-        el.checked = false;
-      }
-    });
+    // убрать классы при загрузки js
+    $(".slider__list").removeClass("slider__list--nojs");
 
+    // функции
     let closePopup = function () {
       $(".modal").addClass("visually-hidden");
     }
@@ -90,6 +87,15 @@
         removeOverflow();
     });
 
+    // localStorage форма
+    $('#modal-login-email').on('input', function (evt) {
+      localStorage['modal-form-email'] = $('#modal-login-email').val();
+    });
+
+    $('#login-form').on('submit', function (evt) {
+      localStorage.removeItem('modal-form-email');
+    });
+
     // открытие фильтра
     $('.filter__button--open').on('click', function (evt) {
       evt.preventDefault();
@@ -102,13 +108,11 @@
       $(".filter__form").addClass("filter__form--closed");
     });
 
-    // localStorage форма
-    $('#modal-login-email').on('input', function (evt) {
-      localStorage['modal-form-email'] = $('#modal-login-email').val();
-    });
-
-    $('#login-form').on('submit', function (evt) {
-      localStorage.removeItem('modal-form-email');
+    // кнопка clear all
+    $('.filter__button--clean').on('click', function (evt) {
+      for (let el of $('input:checkbox')) {
+        el.checked = false;
+      }
     });
   });
 
