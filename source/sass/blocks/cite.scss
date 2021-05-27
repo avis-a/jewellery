@@ -1,45 +1,18 @@
 .cite {
-  // padding-left: 15.8%;
 
   @media (max-width: $desktop-width) {
     grid-area: cite;
     padding-top: 48px;
-    // padding-left: 0;
-    // order: unset;
-    // margin-left: unset;
-    // margin-right: unset;
   }
 
   @media (max-width: $tablet-width) {
-    // border-bottom: 1px solid $border_color_footer;
+    padding-top: 45px;
   }
 }
 
-// .cite__container {
-//   @media (max-width: $tablet-width) {
-//     position: relative;
-//   }
-// }
-
-// .cite__container > h2 {
-//   @include text(15px, 16px, 400);
-//   letter-spacing: 0.05em;
-//   text-transform: uppercase;
-//   color: $navy_blue;
-//   margin-bottom: 26px;
-
-//   @media (max-width: $pre-desktop-width) {
-//     margin-top: 39px;
-//   }
-
-//   @media (max-width: $tablet-width) {
-//     margin-top: 29px;
-//   }
-// }
-
 .cite__list {
-  columns: 2;
-  // column-gap: 67px;
+  column-count: 2;
+  column-gap: 50px;
 
   @media (max-width: $desktop-width) {
     column-gap: 75px;
@@ -54,7 +27,13 @@
 
 .cite__item {
   cursor: pointer;
-  padding-bottom: 25px;
+  margin-bottom: 16px;
+
+  &:nth-child(4n) {
+    @media (max-width: $tablet-width) {
+      margin-bottom: 36px;
+    }
+  }
 
   &:hover {
     opacity: 0.5;

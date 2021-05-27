@@ -7,7 +7,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding-bottom: 70px;
+    padding-bottom: 53px;
   }
 }
 
@@ -25,6 +25,10 @@
     text-align: center;
     letter-spacing: 0.03em;
     margin-bottom: 49px;
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: 29px;
+    }
   }
 }
 
@@ -64,6 +68,14 @@
       margin-top: -19px;
       margin-bottom: 38px;
     }
+
+    @media (max-width: $tablet-width) {
+      @include text(14px, 20px, 400);
+      padding-left: 25px;
+      padding-right: 56px;
+      margin-top: -8px;
+      margin-bottom: 19px;
+    }
   }
 }
 
@@ -77,6 +89,13 @@
     padding-left: 49px;
   }
 
+  @media (max-width: $tablet-width) {
+    @include padding(19px, 19px);
+    min-height: 83px;
+    padding-right: 59px;
+    padding-left: 25px;
+  }
+
   & > h3 {
     @include text(18px, 23px, 500);
     font-family: $text-font;
@@ -85,6 +104,10 @@
 
     @media (max-width: $desktop-width) {
       margin-bottom: unset;
+    }
+
+    @media (max-width: $tablet-width) {
+      @include text(16px, 22px, 500);
     }
   }
 }

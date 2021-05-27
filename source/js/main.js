@@ -37,6 +37,8 @@
 
     // убрать классы при загрузки js
     $(".slider__list").removeClass("slider__list--nojs");
+    $(".filter__form").removeClass("filter__form--nojs");
+    $(".filter__form").addClass("filter__form--closed");
 
     // функции
     let closePopup = function () {

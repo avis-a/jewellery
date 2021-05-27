@@ -84,10 +84,6 @@
 }
 
 .filter__wrapper {
-  // padding-bottom: 28px;
-  // margin-top: 28px;
-  // padding-left: 10%;
-  // padding-right: 10%;
   position: relative;
   cursor: pointer;
 
@@ -99,8 +95,10 @@
 .filter__name {
   @include text(16px, 21px, 500);
   color: $medium_black;
-  width: 100%;
   min-height: 68px;
+  width: 100%;
+  padding-top: 25px;
+  padding-left: 25px;
 
   @media (max-width: $desktop-width) {
     @include text(18px, 23px, 500);
@@ -108,12 +106,12 @@
 }
 
 .filter__list {
-  padding-left: 30px;
-  padding-top: 30px;
+  padding-left: 59px;
+  padding-bottom: 17px;
 }
 
 .filter__row {
-  padding-bottom: 15px;
+  margin-bottom: 3px;
   position: relative;
   cursor: pointer;
 
@@ -132,6 +130,7 @@
     height: 15px;
     border: 1px solid $basic_color;
     left: -25px;
+    top: 5px;
   }
 
   &>input:checked+label::before {
@@ -146,8 +145,12 @@
 }
 
 .filter__accordion {
-  top: -18px;
-  right: 25px;
+  top: -45px;
+  right: 23px;
+
+  .acc_active > & {
+    top: -35px;
+  }
 }
 
 .filter__buttons {
@@ -162,7 +165,7 @@
   min-height: 68px;
   border: 1px solid $basic_color;
   @include text(16px, 21px, 500);
-  margin-top: 35px;
+  margin-top: 25px;
   background-color: transparent;
 }
 
@@ -180,4 +183,5 @@
 .filter__button--submit {
   background-color: $basic_color;
   color: $basic_white;
+  margin-top: 35px;
 }

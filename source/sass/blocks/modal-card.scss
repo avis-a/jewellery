@@ -11,10 +11,10 @@
 .modal-card__form {
   background-color: $basic_white;
   color: $medium_black;
-  @include padding(55px, 55px);
+  @include padding(47px, 35px);
   max-width: 500px;
   position: absolute;
-  top: 136px;
+  top: 372px;
   z-index: 4;
   left: 0;
   right: 0;
@@ -23,11 +23,13 @@
 
   @media (max-width: $desktop-width) {
     max-width: 502px;
+    top: 258px;
   }
 
   @media (max-width: $tablet-width) {
     max-width: 290px;
-    @include padding(45px, 45px);
+    top: 117px;
+    @include padding(38px, 4px);
   }
 }
 
@@ -35,11 +37,13 @@
   &>h1 {
     @include text(26px, 34px, 700);
     color: $medium_black;
-    margin-bottom: 55px;
+    margin-bottom: 41px;
 
     @media (max-width: $tablet-width) {
       @include text(24px, 29px, 700);
-      margin-bottom: 40px;
+      margin-bottom: 28px;
+      padding-left: 42px;
+      padding-right: 42px;
     }
   }
 }
@@ -47,17 +51,27 @@
 .modal-card__wrapper {
   display: flex;
   flex-direction: row;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   padding-left: 35px;
   padding-right: 35px;
+
+  & img {
+    padding-top: 5px;
+
+    @media (max-width: $tablet-width) {
+      width: 70px;
+      height: 63px;
+    }
+  }
 
   @media (max-width: $desktop-width) {
     padding-left: 30px;
     padding-right: 30px;
+    margin-bottom: 34px;
   }
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 30px;
+    margin-bottom: 19px;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -72,11 +86,11 @@
   }
 
   &>h2 {
-    margin-bottom: 20px;
+    margin-bottom: 11px;
     @include text(18px, 23px, 700);
 
     @media (max-width: $tablet-width) {
-      margin-bottom: 15px;
+      margin-bottom: 8px;
       @include text(16px, 21px, 700);
     }
   }
@@ -102,6 +116,8 @@
   &>input {
     background-color: transparent;
     border: none;
+    padding-top: 10px;
+    padding-bottom: 5px;
 
     &[value] {
       @include text(18px, 23px, 400);
@@ -158,26 +174,44 @@
   justify-content: space-between;
   padding-left: 35px;
   padding-right: 35px;
-  @include padding(20px, 40px);
+  @include padding(0, 12px);
 
   @media (max-width: $desktop-width) {
     padding-left: 30px;
     padding-right: 30px;
+    @include padding(0, 20px);
   }
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 15px;
+    @include text(12px, 16px, 400);
+    margin-bottom: 0;
     padding-left: 15px;
     padding-right: 15px;
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 25px;
+    padding-top: 21px;
   }
 
   &>p {
+    width: 182px;
+    margin-top: 8px;
+
+    &:nth-child(2n) {
+      padding-left: 53px;
+
+      @media (max-width: $tablet-width) {
+        padding-left: 0;
+      }
+    }
+
+    @media (max-width: $desktop-width) {
+      width: unset;
+      margin-top: 18px;
+    }
+
     @media (max-width: $tablet-width) {
       margin-top: 0;
-      margin-bottom: 20px;
+      margin-bottom: 12px;
     }
   }
 
@@ -212,7 +246,7 @@
   text-decoration: none;
   text-align: center;
   min-height: 68px;
-  min-width: 45%;
+  min-width: 46.4%;
   padding-top: 25px;
   cursor: pointer;
 
@@ -243,6 +277,8 @@
 
 .modal-card__button--close {
   @include pseudo($display: block, $pos: absolute, $content: "");
+  min-width: 20px;
+  min-height: 20px;
   border: none;
   width: 20px;
   height: 20px;

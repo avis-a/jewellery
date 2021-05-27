@@ -16,12 +16,11 @@
   padding-top: 30px;
 
   @media (max-width: $desktop-width) {
-    // padding-top: 17px;
     padding-bottom: 12px;
 
     &.page__opened {
       @include pseudo($display: block, $pos: absolute, $content: "");
-      min-height: 105vh;
+      min-height: 100vh;
       width: 100%;
       top: 0;
       border: none;
@@ -30,12 +29,13 @@
 
       &.page__nojs {
         position: relative;
-        min-height: auto;
+        min-height: 80vh;
       }
     }
 
     @media (max-width: $tablet-width) {
       padding-top: 20px;
+      padding-bottom: 2px;
     }
   }
 }
@@ -53,20 +53,13 @@
   @include push--auto;
   margin-bottom: 9px;
 
-  @media (max-width: $desktop-width) {
-    // width: 66px;
-    // height: 66px;
-  }
-
   &>svg {
 
     fill: $basic_color;
-    // margin: 0 auto;
-    // display: block;
 
-    @media (max-width: $desktop-width) {
-      // width: 52px;
-      // height: 52px;
+    @media (max-width: $tablet-width) {
+      width: 52px;
+      height: 52px;
     }
   }
 }
@@ -110,7 +103,7 @@
 
   @media (max-width: $tablet-width) {
     top: 15px;
-    left: 15px;
+    left: 0;
   }
 }
 
@@ -125,8 +118,13 @@
     .page__nojs & {
       width: 100%;
       order: 5;
-      margin-top: 40px;
-      margin-bottom: 55px;
+      margin-top: 22px;
+      margin-bottom: 49px;
+
+      @media (max-width: $tablet-width) {
+        margin-top: 12px;
+        margin-bottom: 40px;
+      }
 
       & svg {
         position: absolute;
@@ -164,15 +162,14 @@
   margin-left: 60px;
 
   @media (max-width: $desktop-width) {
-
     .page__opened &,
     .page__nojs & {
       @include text(18px, 23px, 500);
       color: $basic_white;
       order: 10;
       position: absolute;
-      bottom: calc(100% - 650px);
-      left: 45px;
+      bottom: -531px;
+      left: -15px;
     }
 
     .page__closed & {
@@ -181,10 +178,10 @@
   }
 
   @media (max-width: $tablet-width) {
-
     .page__opened &,
     .page__nojs & {
-      left: 15px;
+      bottom: -511px;
+      left: -44px;
     }
   }
 }
@@ -210,7 +207,7 @@
 
   @media (max-width: $tablet-width) {
     top: 15px;
-    right: 25px;
+    right: 0;
   }
 }
 
@@ -239,13 +236,17 @@
 }
 
 .page__footer {
-  @include padding(92px, 100px);
+  @include padding(92px, 77px);
   flex-shrink: 0;
   background-color: $basic_black;
   color: $basic_white;
 
   @media (max-width: $desktop-width) {
-    @include padding(50px, 60px);
+    @include padding(50px, 32px);
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 57px;
   }
 }
 

@@ -6,7 +6,7 @@
   background-size: cover;
   background-color: $basic_color;
   overflow: hidden;
-  @include padding(102px,102px);
+  @include padding(91px,72px);
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/intro-catalog-desktop-2x.jpg");
@@ -22,7 +22,7 @@
 
   @media (max-width: $tablet-width) {
     background-image: url("../img/intro-catalog-mobile.jpg");
-    @include padding(89px,89px);
+    @include padding(79px,61px);
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/intro-catalog-mobile-2x.jpg");
@@ -32,23 +32,25 @@
 
 .intro__wrapper {
   text-align: center;
-}
 
-.intro__wrapper > h1 {
-  @include text(34px, 44px, 700);
-  text-transform: uppercase;
-
-  @media (max-width: $tablet-width) {
+  & > h1 {
     @include text(34px, 44px, 700);
+    text-transform: uppercase;
+    margin-bottom: 3px;
+
+    @media (max-width: $tablet-width) {
+      @include text(34px, 44px, 700);
+    }
   }
-}
 
-.intro__wrapper > p {
-  @include text(22px, 29px, 500);
-  font-family: $caption-font;
-  font-style: italic;
+  & > p {
+    @include text(22px, 29px, 500);
+    font-family: $caption-font;
+    font-style: italic;
+    margin-top: 0;
 
-  @media (max-width: $tablet-width) {
-    @include text(22px, 26px, 500);
+    @media (max-width: $tablet-width) {
+      @include text(22px, 26px, 500);
+    }
   }
 }

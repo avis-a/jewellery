@@ -1,17 +1,21 @@
 .catalog-slider {
   border-top: 1px solid $border_grey;
-  @include padding(40px,80px);
+  @include padding(33px,73px);
 
   @media (max-width: $tablet-width) {
     border: none;
-    @include padding(50px,70px);
+    @include padding(14px,61px);
   }
 }
 
 .catalog-slider__wrapper {
-  max-width: 850px;
+  max-width: 74.5%;
   margin-left: auto;
   position: relative;
+
+  @media (max-width: $desktop-width) {
+    max-width: 100%;
+  }
 }
 
 .catalog-slider__buttons {
@@ -25,6 +29,8 @@
   color: $medium_black;
   border: none;
   background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
 
   @media (max-width: $tablet-width) {
     display: none;

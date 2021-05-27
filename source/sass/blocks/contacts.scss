@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 3fr 2fr 1fr;
   // grid-template-columns: 500px 380px 115px;
-  grid-column-gap: 87px;
+  // grid-column-gap: 87px;
 
   @media (max-width: $desktop-width) {
     grid-template-columns: 2fr 1fr;

@@ -3,6 +3,17 @@
 
   @media (max-width: $desktop-width) {
     display: block;
+    padding-top: 20px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 8px;
+  }
+}
+
+.info-list__item {
+  @media (max-width: $desktop-width) {
+    margin-bottom: 20px;
   }
 }
 

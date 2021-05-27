@@ -9,7 +9,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    @include padding(70px,70px);
+    @include padding(59px,50px);
   }
 
   & > h2 {
@@ -37,23 +37,13 @@
   @media (max-width: $tablet-width) {
     display: none;
   }
-
-  // &.slider__list--nojs {
-  //   display: none;
-  // }
 }
-
-// .slider__list--nojs.slider__buttons {
-//   background-color: red;
-// }
 
 .slider__button {
   @include pseudo($display: block, $pos: relative);
   border: none;
   background-color: transparent;
   cursor: pointer;
-  // width: 30px;
-  // height: 10px;
 
   &::before {
     @include pseudo($display: block, $pos: relative);
@@ -112,8 +102,6 @@
 .slick-track {
   display: flex;
   flex-direction: row;
-  // justify-content: space-between;
-  // gap: 30px;
 }
 
 .slider__item {
@@ -145,12 +133,6 @@
   }
 }
 
-// .slick-current {
-//   @media (max-width: $desktop-width) {
-//     margin-left: 0;
-//   }
-// }
-
 .slider__link {
   text-align: center;
   text-decoration: none;
@@ -178,6 +160,11 @@
       min-width: 324px;
       min-height: 340px;
     }
+
+    @media (max-width: $tablet-width) {
+      min-width: 130px;
+      min-height: 136px;
+    }
   }
 }
 
@@ -187,9 +174,22 @@
   list-style-type: none;
   display: flex;
   justify-content: center;
+  position: relative;
 
   @media (max-width: $desktop-width) {
     padding-top: 25px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 13px;
+    visibility: hidden;
+
+    &::after {
+      @include pseudo($display: block, $pos: absolute, $content: "1 of 6");
+      visibility: visible;
+      @include text(16px, 21px, 500);
+      color: $medium_black;
+    }
   }
 }
 

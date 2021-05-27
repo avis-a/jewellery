@@ -1,33 +1,56 @@
 .card {
   display: grid;
-  grid-column-gap: 100px;
-  // grid-template-columns: calc(470px + 30px + 100px) 1fr;
-  grid-template-columns: 2fr 1fr;
-  padding-top: 80px;
+  grid-column-gap: 93px;
+  grid-template-columns: 52% 1fr;
+  @include padding(70px, 7px);
 
   @media (max-width: $desktop-width) {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 40px;
-    padding-top: 60px;
+    @include padding(20px, 0);
   }
+
   @media (max-width: $tablet-width) {
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
+    padding-top: 0;
+  }
+}
+
+.card__gallery {
+  padding-top: 10px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 0;
   }
 }
 
 .card__wrapper {
-  & > h2 {
-  @include text(34px, 44px, 700);
-  color: $medium_black;
-  margin-bottom: 30px;
+  padding-right: 97px;
+
+  @media (max-width: $desktop-width) {
+    padding-right: 0;
   }
 
-  & > p {
+  @media (max-width: $tablet-width) {
+    padding-top: 30px;
+  }
+
+  &>h2 {
+    @include text(34px, 44px, 700);
+    color: $medium_black;
+    margin-bottom: 15px;
+  }
+
+  &>p {
     @include text(26px, 34px, 400);
     color: $medium_black;
     margin-top: 0;
+    margin-bottom: 36px;
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: 28px;
+    }
   }
 }
 
@@ -42,24 +65,24 @@
   @include text(14px, 18px, 400);
   color: $medium_black;
   border-bottom: 1px solid $border_grey;
-  padding-bottom: 15px;
+  padding-bottom: 8px;
 
   &:not(:first-child) {
-    padding-top: 15px;
+    padding-top: 13px;
   }
 
-  & > dt {
+  &>dt {
     font-weight: 500;
   }
 }
 
 .card__row--main {
   justify-content: start;
-  padding-bottom: 25px;
+  padding-bottom: 17px;
   @include text(16px, 21px, 500);
   border: none;
 
-  & > dt {
+  &>dt {
     color: $basic_grey;
   }
 }
@@ -77,6 +100,11 @@
   color: $basic_white;
   margin-top: 50px;
   margin-bottom: 21px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 40px;
+    margin-bottom: 13px;
+  }
 }
 
 .card__list {
@@ -88,25 +116,27 @@
 .card__item {
   @include text(14px, 18px, 500);
   color: $basic_grey;
+  position: relative;
 
   @media (max-width: $desktop-width) {
     @include text(12px, 16px, 500);
   }
 
-  &:not(:last-child) {
-    border-right: 1px solid $border_grey;
-    padding-right: 5%;
-
-    @media (max-width: $desktop-width) {
-      padding-right: 3.5%;
-    }
+  @media (max-width: $tablet-width) {
+    text-align: center;
+    width: 60px;
   }
 
-  &:not(:first-child) {
-    padding-left: 5%;
+  &:not(:last-child)::before {
+    @include pseudo($display: block, $pos: absolute, $content: "");
+    height: 20px;
+    width: 1px;
+    top: -2px;
+    right: -12px;
+    background-color: $border_grey;
 
-    @media (max-width: $desktop-width) {
-      padding-left: 3.5%;
+    @media (max-width: $tablet-width) {
+      right: -25px;
     }
   }
 }

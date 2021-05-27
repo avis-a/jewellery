@@ -2,15 +2,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 30px;
-  row-gap: 44px;
-
-  @media (max-width: $desktop-width) {
-    row-gap: 40px;
-  }
+  row-gap: 33px;
 
   @media (max-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
-    row-gap: 30px;
+    row-gap: 23px;
   }
 }
 .goods__item {
@@ -27,8 +23,12 @@
     @include text(16px, 21px, 500);
     color: $medium_black;
     font-family: $text-font;
-    margin-top: 25px;
-    margin-bottom: 15px
+    margin-top: 14px;
+    margin-bottom: 7px;
+
+    @media (max-width: $tablet-width) {
+      margin-top: 9px;
+    }
   }
 
   & > p {

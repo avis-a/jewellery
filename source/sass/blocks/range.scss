@@ -1,6 +1,8 @@
 .range {
   position: relative;
-  margin-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 15px;
 }
 
 .range__scale {
@@ -11,7 +13,7 @@
 
 .range__bar {
   @include pseudo($display: block, $pos: absolute, $content: "");
-  left: 45px;
+  left: 27%;
   height: 1px;
   width: 50%;
   background-color: $basic_color;
@@ -29,18 +31,18 @@
 }
 
 .range__toggle--min {
-  left: 45px;
+  left: 27%;
 }
 
 .range__toggle--max {
-  left: 150px;
+  left: 71%;
 }
 
 .range__controls {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding-top: 10px;
+  padding-top: 18px;
   // padding-left: 10%;
   // padding-right: 10%;
   @include text(14px, 18px, 500);
