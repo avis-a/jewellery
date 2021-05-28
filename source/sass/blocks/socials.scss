@@ -1,5 +1,5 @@
 .socials {
-  padding-left: 84px;
+  margin-left: auto;
 
   @media (max-width: $desktop-width) {
     grid-area: socials;
@@ -18,9 +18,6 @@
   @media (max-width: $tablet-width) {
     display: flex;
     flex-direction: row;
-    // margin-top: 0;
-    // margin-bottom: 0;
-    // position: relative;
   }
 }
 

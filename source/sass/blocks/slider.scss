@@ -1,23 +1,23 @@
 .slider {
-  @include padding(112px,111px);
+  @include padding(112px, 111px);
   text-align: center;
   color: $medium_black;
   position: relative;
 
   @media (max-width: $desktop-width) {
-    @include padding(69px,59px);
+    @include padding(69px, 59px);
   }
 
   @media (max-width: $tablet-width) {
-    @include padding(59px,50px);
+    @include padding(59px, 50px);
   }
 
-  & > h2 {
+  &>h2 {
     @include text(34px, 44px, 700);
-    margin-bottom: 4px;
+    margin-bottom: 0;
   }
 
-  & > a {
+  &>a {
     @include text(16px, 21px, 500);
     border-bottom: 1px solid $basic_color;
     text-decoration: none;
@@ -44,12 +44,14 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+  @include padding(10px, 10px);
 
   &::before {
     @include pseudo($display: block, $pos: relative);
     background-color: $basic_color;
     width: 29px;
     height: 1px;
+    top: -9px;
   }
 
   &::after {
@@ -75,10 +77,14 @@
   }
 }
 
+.slick-disabled {
+  opacity: 0.3;
+}
+
 .slider__list {
   display: flex;
   flex-direction: column;
-  padding-top: 60px;
+  padding-top: 45px;
 
   @media (max-width: $desktop-width) {
     padding-top: 50px;
@@ -92,21 +98,28 @@
 .slider__list--nojs {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
-  & > li:not(:nth-child(-n+4)) {
+  &>li:not(:nth-child(-n+4)) {
     display: none;
+  }
+
+  @media (max-width: $desktop-width) {
+    &>li:not(:nth-child(-n+2)) {
+      display: none;
+    }
   }
 }
 
 .slick-track {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .slider__item {
   max-width: 270px;
-  margin-left: 30px;
+  margin-right: 1%;
 
   @media (max-width: $desktop-width) {
     max-width: 324px;
@@ -117,28 +130,12 @@
   }
 }
 
-.slider__item {
-  &:nth-child(4n+1) {
-    margin-left: 0;
-
-    @media (max-width: $desktop-width) {
-      margin-left: unset;
-    }
-  }
-
-  &:nth-child(2n+1) {
-    @media (max-width: $desktop-width) {
-      margin-left: 0;
-    }
-  }
-}
-
 .slider__link {
   text-align: center;
   text-decoration: none;
   color: $medium_black;
 
-  & > h3 {
+  &>h3 {
     @include text(16px, 21px, 500);
     font-family: $text-font;
     padding-top: 21px;
@@ -149,7 +146,7 @@
     }
   }
 
-  & > p {
+  &>p {
     @include text(14px, 18px, 700);
   }
 
@@ -203,10 +200,10 @@
 
   &:focus,
   &:hover {
-  color: $medium_black;
+    color: $medium_black;
   }
 }
 
-.slick-active > button {
+.slick-active>button {
   color: $medium_black;
 }

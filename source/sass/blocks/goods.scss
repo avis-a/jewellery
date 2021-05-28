@@ -10,6 +10,10 @@
   }
 }
 .goods__item {
+
+  @media (max-width: $tablet-width) {
+    margin: 0 auto;
+  }
   &:hover,
   &:focus {
     opacity: 0.5;

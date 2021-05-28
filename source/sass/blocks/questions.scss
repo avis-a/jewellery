@@ -40,17 +40,6 @@
   position: relative;
   cursor: pointer;
 
-  @media (max-width: $desktop-width) {
-    // padding-left: 50px;
-    // padding-right: 100px;
-  }
-
-  @media (max-width: $tablet-width) {
-    // @include padding(25px, 25px);
-    // padding-left: 25px;
-    // padding-right: 64px;
-  }
-
   &:not(:last-child) {
     border-bottom: 1px solid $basic_color;
   }

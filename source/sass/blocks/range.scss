@@ -43,8 +43,6 @@
   flex-direction: row;
   justify-content: space-around;
   padding-top: 18px;
-  // padding-left: 10%;
-  // padding-right: 10%;
   @include text(14px, 18px, 500);
   color: $medium_black;
 }

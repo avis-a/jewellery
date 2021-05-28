@@ -1,7 +1,8 @@
 .img-carousel {
   display: grid;
-  grid-gap: 30px;
-  grid-template-columns: 100px 1fr;
+  row-gap: 30px;
+  column-gap: 27px;
+  grid-template-columns: 17% 1fr;
   grid-template-rows: repeat(3, 125px);
 
   @media (max-width: $desktop-width) {
