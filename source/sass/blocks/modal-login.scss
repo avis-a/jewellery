@@ -16,7 +16,7 @@
   padding-right: 45px;
   max-width: 430px;
   position: absolute;
-  top: 136px;
+  top: 372px;
   z-index: 4;
   left: 0;
   right: 0;
@@ -36,6 +36,7 @@
     padding-left: 51px;
     padding-right: 51px;
     max-width: 442px;
+    top: 258px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/login-tablet@2x.jpg");
@@ -48,6 +49,7 @@
     @include padding(130px, 45px);
     padding-left: 15px;
     padding-right: 15px;
+    top: 117px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/login-mobile@2x.jpg");
