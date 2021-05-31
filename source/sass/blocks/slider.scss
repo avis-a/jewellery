@@ -12,12 +12,12 @@
     @include padding(59px, 50px);
   }
 
-  &>h2 {
+  & > h2 {
     @include text(34px, 44px, 700);
     margin-bottom: 0;
   }
 
-  &>a {
+  & > a {
     @include text(16px, 21px, 500);
     border-bottom: 1px solid $basic_color;
     text-decoration: none;
@@ -41,10 +41,10 @@
 
 .slider__button {
   @include pseudo($display: block, $pos: relative);
+  @include padding(10px, 10px);
   border: none;
   background-color: transparent;
   cursor: pointer;
-  @include padding(10px, 10px);
 
   &::before {
     @include pseudo($display: block, $pos: relative);
@@ -100,12 +100,12 @@
   flex-direction: row;
   justify-content: space-evenly;
 
-  &>li:not(:nth-child(-n+4)) {
+  & > li:not(:nth-child(-n+4)) {
     display: none;
   }
 
   @media (max-width: $desktop-width) {
-    &>li:not(:nth-child(-n+2)) {
+    & > li:not(:nth-child(-n+2)) {
       display: none;
     }
   }
@@ -135,7 +135,7 @@
   text-decoration: none;
   color: $medium_black;
 
-  &>h3 {
+  & > h3 {
     @include text(16px, 21px, 500);
     font-family: $text-font;
     padding-top: 21px;
@@ -146,7 +146,7 @@
     }
   }
 
-  &>p {
+  & > p {
     @include text(14px, 18px, 700);
   }
 
@@ -183,8 +183,8 @@
 
     &::after {
       @include pseudo($display: block, $pos: absolute, $content: "1 of 6");
-      visibility: visible;
       @include text(16px, 21px, 500);
+      visibility: visible;
       color: $medium_black;
     }
   }
@@ -204,6 +204,6 @@
   }
 }
 
-.slick-active>button {
+.slick-active > button {
   color: $medium_black;
 }

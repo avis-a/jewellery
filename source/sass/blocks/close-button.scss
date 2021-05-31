@@ -6,7 +6,7 @@
   cursor: pointer;
   border: 0;
 
-  &::before{
+  &::before {
     @include pseudo($display: block, $pos: absolute, $content: "");
     width: 15px;
     height: 15px;
@@ -20,7 +20,6 @@
 
 .acc_active .questions__button,
 .acc_active .filter__accordion {
-
   &.close-button::before {
     transform: rotate(-45deg);
   }

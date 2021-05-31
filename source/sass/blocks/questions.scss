@@ -69,9 +69,9 @@
 }
 
 .questions__wrapper {
+  @include padding(47px, 35px);
   width: 100%;
   min-height: 112px;
-  @include padding(47px, 35px);
   padding-left: 42px;
 
   @media (max-width: $desktop-width) {

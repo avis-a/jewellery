@@ -5,10 +5,11 @@
   grid-gap: 50px;
 
   @media (max-width: $desktop-width) {
+    @include padding(50px,32px);
     display: flex;
     flex-direction: column;
-    @include padding(50px,32px);
   }
+
   @media (max-width: $tablet-width) {
     @include padding(40px,24px);
     grid-gap: 40px;

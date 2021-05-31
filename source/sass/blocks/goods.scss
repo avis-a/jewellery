@@ -9,16 +9,18 @@
     row-gap: 23px;
   }
 }
-.goods__item {
 
+.goods__item {
   @media (max-width: $tablet-width) {
     margin: 0 auto;
   }
+
   &:hover,
   &:focus {
     opacity: 0.5;
   }
 }
+
 .goods__link {
   text-align: center;
   text-decoration: none;

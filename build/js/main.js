@@ -16,12 +16,10 @@
       slidesToScroll: 4,
       prevArrow: $('.slider__button--previous'),
       nextArrow: $('.slider__button--next'),
-      infinite: false,
-
       dots: true,
       dotsClass: 'slider__controls',
       customPaging: function (slick, index) {
-        return `<button class="slider__control" type="button" aria-label="${index + 1} slide">${index + 1}</button>`;
+        return '<button class="slider__control" type="button" aria-label="' + (index + 1) + ' slide">' + (index + 1) + '</button>';
       },
       responsive: [
         {
@@ -36,29 +34,29 @@
     });
 
     // убрать классы при загрузки js
-    $(".slider__list").removeClass("slider__list--nojs");
-    $(".filter__form").removeClass("filter__form--nojs");
-    $(".filter__form").addClass("filter__form--closed");
-    $("button").removeClass("nojs");
+    $('.slider__list').removeClass('slider__list--nojs');
+    $('.filter__form').removeClass('filter__form--nojs');
+    $('.filter__form').addClass('filter__form--closed');
+    $('button').removeClass('nojs');
 
     // функции
-    let closePopup = function () {
-      $(".modal").addClass("visually-hidden");
-    }
+    var closePopup = function () {
+      $('.modal').addClass('visually-hidden');
+    };
 
-    let setOverflow = function () {
-      $(".page").addClass("page__overflow");
-    }
+    var setOverflow = function () {
+      $('.page').addClass('page__overflow');
+    };
 
-    let removeOverflow = function () {
-      $(".page").removeClass("page__overflow");
-    }
+    var removeOverflow = function () {
+      $('.page').removeClass('page__overflow');
+    };
 
     // открытие модалки login
     $('.page__login').on('click', function (evt) {
       evt.preventDefault();
       $('#modal-login-email').val(localStorage['modal-form-email']);
-      $(".modal-login").removeClass("visually-hidden");
+      $('.modal-login').removeClass('visually-hidden');
       $('#modal-login-email').trigger('focus');
       setOverflow();
     });
@@ -66,12 +64,12 @@
     // открытие модалки card
     $('.card__button').on('click', function (evt) {
       evt.preventDefault();
-      $(".modal-card").removeClass("visually-hidden");
+      $('.modal-card').removeClass('visually-hidden');
       setOverflow();
     });
 
     // закрытие по крестику
-    $('.modal-close').on('click', function (evt) {
+    $('.modal-close').on('click', function () {
       closePopup();
       removeOverflow();
     });
@@ -85,37 +83,37 @@
     });
 
     // закрытие по overlay
-    $('.overlay').on('click', function (evt) {
-        closePopup();
-        removeOverflow();
+    $('.overlay').on('click', function () {
+      closePopup();
+      removeOverflow();
     });
 
     // localStorage форма
-    $('#modal-login-email').on('input', function (evt) {
+    $('#modal-login-email').on('input', function () {
       localStorage['modal-form-email'] = $('#modal-login-email').val();
     });
 
-    $('#login-form').on('submit', function (evt) {
+    $('#login-form').on('submit', function () {
       localStorage.removeItem('modal-form-email');
     });
 
     // открытие фильтра
     $('.filter__button--open').on('click', function (evt) {
       evt.preventDefault();
-      $(".filter__form").removeClass("filter__form--closed");
-      $(".filter__form").addClass("filter__form--opened");
+      $('.filter__form').removeClass('filter__form--closed');
+      $('.filter__form').addClass('filter__form--opened');
     });
 
     // закрытие фильтра
-    $('.filter__close').on('click', function (evt) {
-      $(".filter__form").addClass("filter__form--closed");
+    $('.filter__close').on('click', function () {
+      $('.filter__form').addClass('filter__form--closed');
     });
 
     // кнопка clear all
-    $('.filter__button--clean').on('click', function (evt) {
-      for (let el of $('input:checkbox')) {
+    $('.filter__button--clean').on('click', function () {
+      $('input:checkbox').forEach(function (el) {
         el.checked = false;
-      }
+      });
     });
   });
 

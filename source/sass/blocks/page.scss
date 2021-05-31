@@ -49,11 +49,11 @@
 }
 
 .page__logo {
-  order: 2;
   @include push--auto;
+  order: 2;
   margin-bottom: 9px;
 
-  &>svg {
+  & > svg {
 
     fill: $basic_color;
 
@@ -113,7 +113,6 @@
   position: relative;
 
   @media (max-width: $desktop-width) {
-
     .page__opened &,
     .page__nojs & {
       width: 100%;
@@ -139,9 +138,9 @@
   }
 
   & input {
+    @include text(14px, 21px, 500);
     border: none;
     padding-left: 12px;
-    @include text(14px, 21px, 500);
 
     @media (max-width: $desktop-width) {
       width: 100%;
@@ -232,7 +231,7 @@
 .page__cart {
   text-decoration: none;
   color: $medium_black;
-  margin-bottom: 50px
+  margin-bottom: 50px;
 }
 
 .page__footer {

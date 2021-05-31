@@ -6,7 +6,7 @@
     padding-right: 0;
   }
 
-  &>h2 {
+  & > h2 {
     @include text(34px, 44px, 700);
     letter-spacing: 0.03em;
     margin-bottom: 0;
@@ -16,7 +16,7 @@
     }
   }
 
-  &>p {
+  & > p {
     @include text(16px, 21px, 400);
     color: $basic_grey;
     margin-top: 11px;
@@ -45,7 +45,7 @@
     padding-right: 0;
   }
 
-  &>input {
+  & > input {
     border: none;
     background-color: transparent;
     border-bottom: 1px solid $basic_white;

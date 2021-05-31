@@ -1,13 +1,14 @@
 .card {
+  @include padding(70px, 7px);
   display: grid;
   grid-column-gap: 93px;
   grid-template-columns: 52% 1fr;
-  @include padding(70px, 7px);
+
 
   @media (max-width: $desktop-width) {
+    @include padding(20px, 0);
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 40px;
-    @include padding(20px, 0);
   }
 
   @media (max-width: $tablet-width) {
@@ -36,13 +37,13 @@
     padding-top: 30px;
   }
 
-  &>h2 {
+  & > h2 {
     @include text(34px, 44px, 700);
     color: $medium_black;
     margin-bottom: 15px;
   }
 
-  &>p {
+  & > p {
     @include text(26px, 34px, 400);
     color: $medium_black;
     margin-top: 0;
@@ -59,10 +60,10 @@
 }
 
 .card__row {
+  @include text(14px, 18px, 400);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  @include text(14px, 18px, 400);
   color: $medium_black;
   border-bottom: 1px solid $border_grey;
   padding-bottom: 8px;
@@ -71,23 +72,24 @@
     padding-top: 13px;
   }
 
-  &>dt {
+  & > dt {
     font-weight: 500;
   }
 }
 
 .card__row--main {
+  @include text(16px, 21px, 500);
   justify-content: start;
   padding-bottom: 17px;
-  @include text(16px, 21px, 500);
   border: none;
 
-  &>dt {
+  & > dt {
     color: $basic_grey;
   }
 }
 
 .card__button {
+  @include text(16px, 21px, 500);
   display: block;
   padding-top: 28px;
   text-align: center;
@@ -95,7 +97,6 @@
   width: 100%;
   min-height: 68px;
   border: none;
-  @include text(16px, 21px, 500);
   background-color: $basic_color;
   color: $basic_white;
   margin-top: 50px;

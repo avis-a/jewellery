@@ -22,23 +22,23 @@
 }
 
 .inst__list {
+  @include padding(65px, 132px);
   display: grid;
   grid-template-columns: 1fr 2fr 1fr 1fr;
   row-gap: 25px;
   column-gap: 27px;
-  @include padding(65px, 132px);
 
   @media (max-width: $desktop-width) {
+    @include padding(60px, 80px);
     row-gap: 20px;
     column-gap: 16px;
-    @include padding(60px, 80px);
   }
 
   @media (max-width: $tablet-width) {
+    @include padding(46px, 71px);
     grid-template-columns: 1fr 1fr;
     row-gap: 27px;
     column-gap: 24px;
-    @include padding(46px, 71px);
   }
 }
 

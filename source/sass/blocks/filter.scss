@@ -5,14 +5,13 @@
 
 .filter__form {
   @media (max-width: $desktop-width) {
-
     &.filter__form--opened {
       @include pseudo($display: block, $pos: absolute, $content: "");
+      @include padding(12px, 40px);
       min-height: auto;
       width: 90%;
       top: 400px;
       left: 0;
-      @include padding(12px, 40px);
       background-color: $basic_white;
       box-shadow: 0 0 10px $medium_black;
       z-index: 3;
@@ -115,7 +114,7 @@
   position: relative;
   cursor: pointer;
 
-  &>label {
+  & > label {
     @include text(14px, 18px, 500);
     color: $medium_black;
 
@@ -124,7 +123,7 @@
     }
   }
 
-  &>label::before {
+  & > label::before {
     @include pseudo($display: block, $pos: absolute, $content: "");
     width: 15px;
     height: 15px;
@@ -133,7 +132,7 @@
     top: 5px;
   }
 
-  &>input:checked+label::before {
+  & > input:checked + label::before {
     background-color: $basic_color;
   }
 
@@ -161,10 +160,10 @@
 }
 
 .filter__button {
+  @include text(16px, 21px, 500);
   width: 100%;
   min-height: 68px;
   border: 1px solid $basic_color;
-  @include text(16px, 21px, 500);
   margin-top: 25px;
   background-color: transparent;
 }

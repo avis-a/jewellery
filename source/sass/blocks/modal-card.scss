@@ -9,9 +9,10 @@
 }
 
 .modal-card__form {
+  @include padding(47px, 35px);
+  @include push--auto;
   background-color: $basic_white;
   color: $medium_black;
-  @include padding(47px, 35px);
   max-width: 500px;
   position: absolute;
   top: 372px;
@@ -19,7 +20,6 @@
   left: 0;
   right: 0;
   text-align: center;
-  @include push--auto;
 
   @media (max-width: $desktop-width) {
     max-width: 502px;
@@ -27,14 +27,14 @@
   }
 
   @media (max-width: $tablet-width) {
+    @include padding(38px, 4px);
     max-width: 290px;
     top: 117px;
-    @include padding(38px, 4px);
   }
 }
 
 .modal-card__container {
-  &>h1 {
+  & > h1 {
     @include text(26px, 34px, 700);
     color: $medium_black;
     margin-bottom: 41px;
@@ -85,17 +85,17 @@
     margin-left: 15px;
   }
 
-  &>h2 {
-    margin-bottom: 11px;
+  & > h2 {
     @include text(18px, 23px, 700);
+    margin-bottom: 11px;
 
     @media (max-width: $tablet-width) {
-      margin-bottom: 8px;
       @include text(16px, 21px, 700);
+      margin-bottom: 8px;
     }
   }
 
-  &>p {
+  & > p {
     @include text(18px, 23px, 400);
     margin: 0;
     text-align: start;
@@ -113,7 +113,7 @@
   width: 20px;
   position: relative;
 
-  &>input {
+  & > input {
     background-color: transparent;
     border: none;
     padding-top: 10px;
@@ -168,18 +168,18 @@
 
 .modal-card__sum {
   @include text(14px, 18px, 400);
+  @include padding(0, 12px);
   color: $medium_black;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-left: 35px;
   padding-right: 35px;
-  @include padding(0, 12px);
 
   @media (max-width: $desktop-width) {
+    @include padding(0, 20px);
     padding-left: 30px;
     padding-right: 30px;
-    @include padding(0, 20px);
   }
 
   @media (max-width: $tablet-width) {
@@ -192,7 +192,7 @@
     padding-top: 21px;
   }
 
-  &>p {
+  & > p {
     width: 182px;
     margin-top: 8px;
 
@@ -268,11 +268,11 @@
 }
 
 .modal-card__button--back {
+  @include push--auto;
   display: block;
   padding-top: 25px;
   text-decoration: none;
   width: 90%;
-  @include push--auto;
 }
 
 .modal-card__button--close {

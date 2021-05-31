@@ -1,4 +1,5 @@
 .intro {
+  @include padding(91px,72px);
   color: $basic_white;
   background-image: url("../img/intro-catalog-desktop.jpg");
   background-repeat: no-repeat;
@@ -6,7 +7,6 @@
   background-size: cover;
   background-color: $basic_color;
   overflow: hidden;
-  @include padding(91px,72px);
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/intro-catalog-desktop-2x.jpg");
@@ -21,8 +21,8 @@
   }
 
   @media (max-width: $tablet-width) {
-    background-image: url("../img/intro-catalog-mobile.jpg");
     @include padding(79px,61px);
+    background-image: url("../img/intro-catalog-mobile.jpg");
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/intro-catalog-mobile-2x.jpg");
