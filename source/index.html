@@ -33,13 +33,15 @@
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="page__search">
-          <svg width="14" height="14">
-            <use xlink:href="img/sprite.svg#icon-search"></use>
-          </svg>
-          <label class="visually-hidden" for="search">Type here to search</label>
-          <input id="search" type="text" name="search" placeholder="Type here to search">
+          <form id="search-form" action="https://echo.htmlacademy.ru/" method="POST">
+            <svg width="14" height="14">
+              <use xlink:href="img/sprite.svg#icon-search"></use>
+            </svg>
+            <label class="visually-hidden" for="search">Type here to search</label>
+            <input id="search" type="text" name="search" placeholder="Type here to search">
+          </form>
         </div>
-        <a class="page__login" href="/modal-login.html">Login</a>
+        <a class="page__login" href="./modal-login.html">Login</a>
         <a class="page__cart" href="#">Cart 0</a>
       </div>
       <nav class="main-nav">
@@ -89,7 +91,8 @@
       <section class="slider container">
         <h2>New In</h2>
         <div class="slider__buttons">
-          <button class="slider__button slider__button--previous nojs button" type="button" aria-label="Previous"></button>
+          <button class="slider__button slider__button--previous nojs button" type="button"
+            aria-label="Previous"></button>
           <button class="slider__button slider__button--next nojs button" type="button" aria-label="Next"></button>
         </div>
         <a href="./catalog.html">Shop Now</a>
@@ -514,9 +517,11 @@
         <h2>The good stuff in your inbox</h2>
         <p>News and updates from CH. No spam, we promise.</p>
         <div class="subscribe__field">
-          <label class="visually-hidden" for="subscribe">Your E-mail</label>
-          <input id="subscribe" type="text" name="subscribe" placeholder="Your E-mail">
-          <button class="subscribe__button button" type="button" aria-label="Sign Up">Sign Up</button>
+          <form id="subscribe-form" action="https://echo.htmlacademy.ru/" method="POST">
+            <label class="visually-hidden" for="subscribe">Your E-mail</label>
+            <input id="subscribe" type="text" name="subscribe" placeholder="Your E-mail">
+            <button class="subscribe__button button" type="submit" aria-label="Sign Up">Sign Up</button>
+          </form>
         </div>
       </div>
       <div class="cite">

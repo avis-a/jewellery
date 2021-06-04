@@ -102,11 +102,13 @@
       evt.preventDefault();
       $('.filter__form').removeClass('filter__form--closed');
       $('.filter__form').addClass('filter__form--opened');
+      setOverflow();
     });
 
     // закрытие фильтра
     $('.filter__close').on('click', function () {
       $('.filter__form').addClass('filter__form--closed');
+      removeOverflow();
     });
 
     // кнопка clear all

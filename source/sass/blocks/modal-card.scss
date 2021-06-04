@@ -15,7 +15,7 @@
   color: $medium_black;
   max-width: 500px;
   position: absolute;
-  top: 372px;
+  top: 10%;
   z-index: 4;
   left: 0;
   right: 0;
@@ -23,13 +23,13 @@
 
   @media (max-width: $desktop-width) {
     max-width: 502px;
-    top: 258px;
+    // top: 258px;
   }
 
   @media (max-width: $tablet-width) {
     @include padding(38px, 4px);
     max-width: 290px;
-    top: 117px;
+    top: 60%;
   }
 }
 

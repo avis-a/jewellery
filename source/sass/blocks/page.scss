@@ -20,7 +20,7 @@
 
     &.page__opened {
       @include pseudo($display: block, $pos: absolute, $content: "");
-      min-height: 100vh;
+      min-height: 140vh;
       width: 100%;
       top: 0;
       border: none;
@@ -53,7 +53,7 @@
   order: 2;
   margin-bottom: 9px;
 
-  & > svg {
+  &>svg {
 
     fill: $basic_color;
 
@@ -112,6 +112,10 @@
   color: $basic_grey;
   position: relative;
 
+  &:hover {
+    opacity: 0.5;
+  }
+
   @media (max-width: $desktop-width) {
     .page__opened &,
     .page__nojs & {
@@ -148,6 +152,12 @@
       border-radius: 21px;
       background-color: $basic_white;
       opacity: 0.15;
+      padding-left: 40px;
+
+      &:focus {
+        opacity: 0.50;
+        color: $basic_black;
+      }
 
       &::placeholder {
         color: transparent;
@@ -220,11 +230,6 @@
   @media (max-width: $desktop-width) {
     padding-top: 0;
   }
-
-  &:hover,
-  &:focus {
-    opacity: 0.5;
-  }
 }
 
 .page__login,
@@ -232,6 +237,11 @@
   text-decoration: none;
   color: $medium_black;
   margin-bottom: 50px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
 }
 
 .page__footer {

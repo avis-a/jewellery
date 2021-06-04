@@ -117,6 +117,7 @@
   & > label {
     @include text(14px, 18px, 500);
     color: $medium_black;
+    cursor: pointer;
 
     @media (max-width: $desktop-width) {
       @include text(16px, 21px, 500);
