@@ -64,7 +64,7 @@
   text-decoration: none;
   display: flex;
   flex-direction: row-reverse;
-  max-height: 300px;
+  min-height: 300px;
 
   @media (max-width: $tablet-width) {
     flex-direction: column-reverse;
