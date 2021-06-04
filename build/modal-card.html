@@ -42,9 +42,10 @@
             <p>&dollar; 115</p>
           </div>
           <div class="modal-card__counter">
-            <button class="modal-card__count modal-card__count--plus button" aria-label="Plus" tabindex="1"></button>
-            <input type="text" class="quantity" value="1">
-            <button class="modal-card__count modal-card__count--minus button" aria-label="Minus" tabindex="2"></button>
+            <button class="modal-card__count modal-card__count--plus button" aria-label="Plus" tabindex="0"></button>
+            <label class="visually-hidden" for="quantity"></label>
+            <input id="quantity" type="number" name="quantity" placeholder="1" tabindex="2">
+            <button class="modal-card__count modal-card__count--minus button" aria-label="Minus" tabindex="1"></button>
           </div>
         </div>
         <div class="modal-card__footer">

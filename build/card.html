@@ -412,21 +412,21 @@
     <div class="modal-login__overlay overlay"></div>
     <form class="modal-login__form" id="login-form" action="https://echo.htmlacademy.ru/" method="POST">
       <div class="modal-login__container">
-        <button type="button" class="modal-close modal-login__button modal-login__button--close" aria-label="Close" tabindex="6"></button>
+        <button type="button" class="modal-close modal-login__button modal-login__button--close" aria-label="Close" tabindex="5"></button>
         <h1>Log In</h1>
         <div class="modal-login__wrapper">
           <div class="modal-login__row modal-login__row--email">
             <label class="visually-hidden" for="modal-login-email"></label>
-            <input id="modal-login-email" type="email" name="modal-login-email" placeholder="Your E-mail" tabindex="1" required="">
+            <input id="modal-login-email" type="email" name="modal-login-email" placeholder="Your E-mail" tabindex="0" required="">
           </div>
           <div class="modal-login__row modal-login__row--password">
             <label class="visually-hidden" for="modal-login-password"></label>
-            <input id="modal-login-password" type="password" name="modal-login-password" placeholder="Password" tabindex="2" required="">
+            <input id="modal-login-password" type="password" name="modal-login-password" placeholder="Password" tabindex="1" required="">
           </div>
-          <a class="modal-login__forgot" href="#" aria-label="Forgot your password?" tabindex="3">Forgot your
+          <a class="modal-login__forgot" href="#" aria-label="Forgot your password?" tabindex="2">Forgot your
             password?</a>
         </div>
-        <button type="submit" class="modal-login__button modal-login__button--submit button" aria-label="Log In" tabindex="4">Log In</button>
+        <button type="submit" class="modal-login__button modal-login__button--submit button" aria-label="Log In" tabindex="3">Log In</button>
         <div class="modal-login__noaccount">
           <p>Don’t have an account?</p>
           <a class="modal-login__signin" href="#" aria-label="Sign up" tabindex="4">Sign up</a>
@@ -455,9 +455,10 @@
             <p>&dollar; 115</p>
           </div>
           <div class="modal-card__counter">
-            <button class="modal-card__count modal-card__count--plus button" aria-label="Plus" tabindex="1"></button>
-            <input type="text" class="quantity" value="1">
-            <button class="modal-card__count modal-card__count--minus button" aria-label="Minus" tabindex="2"></button>
+            <button class="modal-card__count modal-card__count--plus button" aria-label="Plus" tabindex="0"></button>
+            <label class="visually-hidden" for="quantity"></label>
+            <input id="quantity" type="number" name="quantity" placeholder="1" tabindex="2">
+            <button class="modal-card__count modal-card__count--minus button" aria-label="Minus" tabindex="1"></button>
           </div>
         </div>
         <div class="modal-card__footer">
