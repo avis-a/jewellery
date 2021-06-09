@@ -1,9 +1,9 @@
 .questions {
   color: $medium_black;
-  padding-bottom: 107px;
+  padding-bottom: 100px;
 
   @media (max-width: $desktop-width) {
-    padding-bottom: 71px;
+    padding-bottom: 67px;
   }
 
   @media (max-width: $tablet-width) {
@@ -45,13 +45,14 @@
   }
 
   & > p {
-    @include text(16px, 21px, 400);
-    margin-top: -43px;
+    @include text(14px, 21px, 400);
+    margin-top: -35px;
     padding-left: 47px;
-    padding-right: 395px;
-    margin-bottom: 43px;
+    padding-right: 383px;
+    margin-bottom: 35px;
 
     @media (max-width: $desktop-width) {
+      @include text(16px, 21px, 400);
       padding-left: 49px;
       padding-right: 53px;
       margin-top: -19px;
@@ -69,7 +70,7 @@
 }
 
 .questions__wrapper {
-  @include padding(47px, 35px);
+  @include padding(45px, 45px);
   width: 100%;
   min-height: 112px;
   padding-left: 42px;
@@ -88,7 +89,8 @@
   & > h3 {
     @include text(18px, 23px, 500);
     font-family: $text-font;
-    margin-bottom: 5px;
+    // margin-bottom: 17px;
+    margin-bottom: unset;
     cursor: pointer;
 
     @media (max-width: $desktop-width) {

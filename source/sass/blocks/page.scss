@@ -50,11 +50,10 @@
 
 .page__logo {
   @include push--auto;
-  order: 2;
+  // order: 2;
   margin-bottom: 9px;
 
-  &>svg {
-
+  & > svg {
     fill: $basic_color;
 
     @media (max-width: $tablet-width) {
@@ -84,6 +83,7 @@
     top: 21px;
     left: 0;
     padding: 0;
+    order: -100;
 
     &::before {
       @include pseudo($display: block, $pos: absolute, $content: "");
@@ -108,7 +108,7 @@
 }
 
 .page__search {
-  order: 1;
+  order: -100;
   color: $basic_grey;
   position: relative;
 
@@ -167,7 +167,7 @@
 }
 
 .page__login {
-  order: 3;
+  // order: 3;
   margin-left: 60px;
 
   @media (max-width: $desktop-width) {
@@ -196,7 +196,7 @@
 }
 
 .page__cart {
-  order: 4;
+  // order: 4;
   margin-left: 35px;
 
   @media (max-width: $desktop-width) {
@@ -245,7 +245,8 @@
 }
 
 .page__footer {
-  @include padding(92px, 77px);
+  @include padding(92px, 54px);
+  margin-top: 10px;
   flex-shrink: 0;
   background-color: $basic_black;
   color: $basic_white;
@@ -256,6 +257,7 @@
 
   @media (max-width: $tablet-width) {
     padding-bottom: 57px;
+    margin-top: 0;
   }
 }
 

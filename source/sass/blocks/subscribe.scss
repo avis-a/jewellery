@@ -1,7 +1,9 @@
 .subscribe {
-  padding-right: 14.1%;
+  width: 500px;
+  // padding-right: 14.1%;
 
   @media (max-width: $desktop-width) {
+    width: unset;
     grid-area: sub;
     padding-right: 0;
   }
@@ -50,7 +52,7 @@
     background-color: transparent;
     border-bottom: 1px solid $basic_white;
     width: 100%;
-    padding-bottom: 15px;
+    padding-bottom: 14px;
     color: $basic_grey;
     -webkit-appearance: none;
 
@@ -76,16 +78,17 @@
   background-color: transparent;
   position: absolute;
   cursor: pointer;
-  right: 42px;
-  bottom: 15px;
+  right: 43px;
+  bottom: 9px;
+  padding: 0;
 
   @media (max-width: $desktop-width) {
-    right: 100px;
+    right: 107px;
     bottom: 8px;
   }
 
   @media (max-width: $tablet-width) {
-    right: 37px;
+    right: 43px;
   }
 
   &::before {

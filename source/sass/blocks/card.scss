@@ -1,14 +1,15 @@
 .card {
-  @include padding(70px, 7px);
-  display: grid;
-  grid-column-gap: 93px;
-  grid-template-columns: 52% 1fr;
-
+  @include padding(70px, 0);
+  // display: grid;
+  // grid-column-gap: 93px;
+  // grid-template-columns: 52% 1fr;
+  display: flex;
+  flex-direction: row;
 
   @media (max-width: $desktop-width) {
     @include padding(20px, 0);
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 40px;
+    // grid-template-columns: 1fr 1fr;
+    // grid-column-gap: 40px;
   }
 
   @media (max-width: $tablet-width) {
@@ -19,22 +20,62 @@
 }
 
 .card__gallery {
+  display: flex;
+  flex-direction: row-reverse;
+  overflow: hidden;
   padding-top: 10px;
+
+  @media (max-width: $desktop-width) {
+    flex-direction: column;
+    width: 319px;
+  }
 
   @media (max-width: $tablet-width) {
     padding-top: 0;
+    width: unset;
+    align-items: center;
+  }
+}
+
+.card__main {
+  margin-left: 30px;
+
+  @media (max-width: $desktop-width) {
+    margin-left: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    position: relative;
+
+    &::after {
+      @include pseudo($display: block, $pos: absolute, $content: "1 of 4");
+      @include text(14px, 18px, 500);
+      color: $medium_black;
+      right: 45%;
+      bottom: 13px;
+    }
   }
 }
 
 .card__wrapper {
   padding-right: 97px;
+  padding-left: 100px;
+  flex-grow: 3;
+
+  @media (max-width: $pre-desktop-width) {
+    padding-right: 0;
+    padding-left: 10px;
+  }
 
   @media (max-width: $desktop-width) {
+    padding-left: 40px;
     padding-right: 0;
   }
 
   @media (max-width: $tablet-width) {
     padding-top: 30px;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   & > h2 {

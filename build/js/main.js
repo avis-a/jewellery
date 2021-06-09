@@ -8,10 +8,17 @@
       activeIndex: false,
     });
 
+    $('#filter-accordion').accordionjs({
+      slideSpeed: 150,
+      activeIndex: false,
+      closeOther: false,
+    });
+
     $('.slider__list').slick({
       useCSS: false,
       infinite: false,
       speed: 300,
+      useTransform: false,
       slidesToShow: 4,
       slidesToScroll: 4,
       prevArrow: $('.slider__button--previous'),

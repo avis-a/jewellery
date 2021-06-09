@@ -133,6 +133,10 @@
     top: 5px;
   }
 
+  & > input:focus + label::before {
+    outline: rgb(59, 153, 252) auto 5px;
+  }
+
   & > input:checked + label::before {
     background-color: $basic_color;
   }

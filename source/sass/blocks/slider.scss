@@ -1,15 +1,15 @@
 .slider {
-  @include padding(112px, 111px);
+  @include padding(112px, 108px);
   text-align: center;
   color: $medium_black;
   position: relative;
 
   @media (max-width: $desktop-width) {
-    @include padding(69px, 59px);
+    @include padding(69px, 55px);
   }
 
   @media (max-width: $tablet-width) {
-    @include padding(59px, 50px);
+    @include padding(59px, 47px);
   }
 
   & > h2 {
@@ -24,7 +24,11 @@
     color: $medium_black;
     cursor: pointer;
     display: inline-block;
-    margin-top: 17px;
+    margin-top: 5px;
+
+    @media (max-width: $tablet-width) {
+      margin-top: 22px;
+    }
   }
 }
 
@@ -84,10 +88,12 @@
 .slider__list {
   display: flex;
   flex-direction: column;
-  padding-top: 45px;
+  padding-top: 56px;
+  margin: 0 -15px;
+  overflow: hidden;
 
   @media (max-width: $desktop-width) {
-    padding-top: 50px;
+    padding-top: 47px;
   }
 
   @media (max-width: $tablet-width) {
@@ -118,15 +124,15 @@
 }
 
 .slider__item {
-  max-width: 270px;
-  margin-right: 1%;
+  width: 270px;
+  margin: 0 15px;
 
   @media (max-width: $desktop-width) {
-    max-width: 324px;
+    width: 324px;
   }
 
   @media (max-width: $tablet-width) {
-    max-width: 130px;
+    width: 130px;
   }
 }
 
@@ -138,16 +144,25 @@
   & > h3 {
     @include text(16px, 21px, 500);
     font-family: $text-font;
-    padding-top: 21px;
+    padding-top: 23px;
     margin-bottom: -11px;
 
     @media (max-width: $desktop-width) {
       margin-bottom: -7px;
     }
+
+    @media (max-width: $tablet-width) {
+      padding-top: 20px;
+    }
   }
 
   & > p {
     @include text(14px, 18px, 700);
+    margin-top: 17px;
+
+    @media (max-width: $tablet-width) {
+      margin-top: 13px;
+    }
   }
 
   & img {
@@ -178,7 +193,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding-top: 13px;
+    padding-top: 17px;
     visibility: hidden;
 
     &::after {
