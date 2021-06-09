@@ -55,6 +55,8 @@
     padding-bottom: 14px;
     color: $basic_grey;
     -webkit-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius: 0px;
 
     @media (max-width: $desktop-width) {
       padding-bottom: 12px;
