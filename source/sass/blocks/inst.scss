@@ -1,6 +1,16 @@
 .inst {
   text-align: center;
   color: $medium_black;
+  padding-bottom: 127px;
+
+  @media (max-width: $desktop-width) {
+    max-width: 768px;
+    padding-bottom: 71px;
+  }
+
+  @media (max-width: $tablet-width) {
+    max-width: 320px;
+  }
 
   & > h2 {
     @include text(34px, 44px, 700);
@@ -22,20 +32,28 @@
 }
 
 .inst__list {
-  @include padding(62px, 132px);
+  // @include padding(62px, 127px);
+  padding-top: 62px;
   display: grid;
-  grid-template-columns: 1fr 1.8fr 1fr 1fr;
-  row-gap: 36px;
+  grid-template-columns: 1fr 1.7fr 1fr 1fr;
+  // row-gap: 32px;
+  row-gap: 3.5%;
   column-gap: 27px;
 
+  @media (max-width: 1319px) {
+    row-gap: 3%;
+  }
+
   @media (max-width: $desktop-width) {
-    @include padding(60px, 71px);
+    // @include padding(60px, 71px);
+    padding-top: 61px;
     row-gap: 20px;
-    column-gap: 16px;
+    column-gap: 13px;
   }
 
   @media (max-width: $tablet-width) {
-    @include padding(46px, 71px);
+    // @include padding(46px, 71px);
+    padding-top: 46px;
     grid-template-columns: auto auto;
     row-gap: 27px;
     column-gap: 24px;

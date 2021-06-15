@@ -15,21 +15,21 @@
   color: $medium_black;
   max-width: 500px;
   position: absolute;
-  top: 10%;
+  top: 50%;
+  left: 50%;
   z-index: 4;
-  left: 0;
-  right: 0;
   text-align: center;
+  max-height: 100vh;
+  overflow-y: auto;
+  transform: translate(-50%, -50%);
 
   @media (max-width: $desktop-width) {
     max-width: 502px;
-    // top: 258px;
   }
 
   @media (max-width: $tablet-width) {
     @include padding(38px, 4px);
     max-width: 290px;
-    top: 60%;
   }
 }
 

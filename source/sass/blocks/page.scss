@@ -20,7 +20,7 @@
 
     &.page__opened {
       @include pseudo($display: block, $pos: absolute, $content: "");
-      min-height: 140vh;
+      min-height: 100vh;
       width: 100%;
       top: 0;
       border: none;
@@ -46,11 +46,14 @@
   flex-wrap: wrap;
   justify-content: space-around;
   position: relative;
+
+  @media (max-width: $desktop-width) {
+    justify-content: unset;
+  }
 }
 
 .page__logo {
   @include push--auto;
-  // order: 2;
   margin-bottom: 9px;
 
   & > svg {
@@ -113,7 +116,7 @@
   position: relative;
 
   &:hover {
-    opacity: 0.5;
+    // opacity: 0.5;
   }
 
   @media (max-width: $desktop-width) {
@@ -150,12 +153,10 @@
       width: 100%;
       min-height: 40px;
       border-radius: 21px;
-      background-color: $basic_white;
-      opacity: 0.15;
+      background-color: $input_white;
       padding-left: 40px;
 
       &:focus {
-        opacity: 0.50;
         color: $basic_black;
       }
 
@@ -167,18 +168,22 @@
 }
 
 .page__login {
-  // order: 3;
   margin-left: 60px;
 
   @media (max-width: $desktop-width) {
-    .page__opened &,
-    .page__nojs & {
+    .page__opened & {
       @include text(18px, 23px, 500);
       color: $basic_white;
-      order: 10;
+      order: 100;
+      position: relative;
+      margin-left: 45px;
+      margin-bottom: 0;
+    }
+
+    .page__nojs & {
       position: absolute;
-      bottom: -531px;
-      left: -15px;
+      bottom: -465px;
+      left: 0;
     }
 
     .page__closed & {
@@ -189,14 +194,12 @@
   @media (max-width: $tablet-width) {
     .page__opened &,
     .page__nojs & {
-      bottom: -511px;
-      left: -44px;
+      margin-left: 15px;
     }
   }
 }
 
 .page__cart {
-  // order: 4;
   margin-left: 35px;
 
   @media (max-width: $desktop-width) {
@@ -245,7 +248,7 @@
 }
 
 .page__footer {
-  @include padding(92px, 54px);
+  @include padding(92px, 74px);
   margin-top: 10px;
   flex-shrink: 0;
   background-color: $basic_black;

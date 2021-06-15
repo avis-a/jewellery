@@ -71,61 +71,68 @@
 
 .blog__link {
   text-decoration: none;
-  display: flex;
-  flex-direction: row-reverse;
-  overflow: hidden;
-  height: 300px;
+  // display: flex;
+  // flex-direction: row-reverse;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (max-width: $desktop-width) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 
   @media (max-width: $tablet-width) {
+    display: flex;
     flex-direction: column-reverse;
-    height: unset;
   }
 
   & img {
+    display: block;
     height: 100%;
     width: 100%;
     object-fit: cover;
   }
 
   .blog__item:nth-child(3n+2) & {
-    flex-direction: row;
+    @media (max-width: $desktop-width) {
+      flex-direction: row;
+    }
 
     @media (max-width: $tablet-width) {
+      display: flex;
       flex-direction: column-reverse;
     }
   }
 
   .blog__item:nth-child(3n+3) & {
+    display: block;
     position: relative;
-    height: 630px;
 
     @media (max-width: $desktop-width) {
       display: flex;
       flex-direction: row-reverse;
-      height: 300px;
     }
 
     @media (max-width: $tablet-width) {
       flex-direction: column-reverse;
-      height: unset;
     }
   }
 }
 
 .blog__text {
-  @include padding(11%, 10%);
-  width: 50%;
+  @include padding(22%, 10%);
   background-color: $light_grey;
-  height: 300px;
+  grid-column: 1;
+  grid-row: 1;
 
   @media (max-width: $desktop-width) {
+    width: 50%;
     padding-top: 65px;
   }
 
   @media (max-width: $tablet-width) {
-    @include padding(35px, 49px);
+    @include padding(42px, 52px);
     width: 100%;
-    height: 246px;
   }
 
   & > time {
@@ -144,6 +151,10 @@
 
     @media (max-width: $desktop-width) {
       margin-bottom: 11%;
+    }
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: 12%;
     }
 
     .blog__item:nth-child(3n+1) & {
@@ -179,18 +190,26 @@
     border-bottom: 1px solid $basic_color;
   }
 
+  .blog__item:nth-child(3n+1) & {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
   .blog__item:nth-child(3n+3) & {
+    @include padding(11%, 19%);
     position: absolute;
     bottom: 0;
-    padding-bottom: 19%;
+    right: 0;
+    width: 50%;
 
     @media (max-width: $desktop-width) {
+      @include padding(81px, 13%);
       position: relative;
-      padding-top: 81px;
     }
 
     @media (max-width: $tablet-width) {
-      @include padding(50px, 69px);
+      @include padding(58px, 69px);
+      width: 100%;
     }
   }
 }

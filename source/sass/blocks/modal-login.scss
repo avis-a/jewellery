@@ -17,15 +17,17 @@
   padding-right: 45px;
   max-width: 430px;
   position: absolute;
-  top: 10%;
+  top: 50%;
+  left: 50%;
   z-index: 4;
-  left: 0;
-  right: 0;
   text-align: center;
   background-image: url("../img/login-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: 100% auto;
+  max-height: 100vh;
+  overflow-y: auto;
+  transform: translate(-50%, -50%);
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/login-desktop@2x.jpg");
@@ -36,7 +38,6 @@
     padding-left: 51px;
     padding-right: 51px;
     max-width: 442px;
-    // top: 258px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/login-tablet@2x.jpg");
@@ -49,7 +50,6 @@
     max-width: 290px;
     padding-left: 15px;
     padding-right: 15px;
-    // top: 117px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/login-mobile@2x.jpg");

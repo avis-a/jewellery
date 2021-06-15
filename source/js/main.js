@@ -124,27 +124,52 @@
         el.checked = false;
       });
     });
+
+    // открытие меню
+    var pageHeader = $('.page__header');
+    var pageToggle = $('.page__toggle');
+    var mainPage = $('.page__main');
+
+    if (pageHeader && pageToggle) {
+      pageHeader.removeClass('page__opened');
+      pageHeader.removeClass('page__nojs');
+      pageHeader.addClass('page__closed');
+
+      $('.page__toggle').on('click', function () {
+        if (pageHeader.hasClass('page__closed')) {
+          pageHeader.removeClass('page__closed');
+          pageHeader.addClass('page__opened');
+          mainPage.addClass('page__hidden');
+          $('.page__login').appendTo('.main-nav');
+        } else {
+          pageHeader.addClass('page__closed');
+          pageHeader.removeClass('page__opened');
+          mainPage.removeClass('page__hidden');
+          $('.page__login').insertBefore('.page__cart');
+        }
+      });
+    }
   });
 
-  var pageHeader = document.querySelector('.page__header');
-  var pageToggle = document.querySelector('.page__toggle');
-  var mainPage = document.querySelector('.page__main');
+  // var pageHeader = document.querySelector('.page__header');
+  // var pageToggle = document.querySelector('.page__toggle');
+  // var mainPage = document.querySelector('.page__main');
 
-  if (pageHeader && pageToggle) {
-    pageHeader.classList.remove('page__opened');
-    pageHeader.classList.add('page__closed');
-    pageHeader.classList.remove('page__nojs');
+  // if (pageHeader && pageToggle) {
+  //   pageHeader.classList.remove('page__opened');
+  //   pageHeader.classList.add('page__closed');
+  //   pageHeader.classList.remove('page__nojs');
 
-    pageToggle.addEventListener('click', function () {
-      if (pageHeader.classList.contains('page__closed')) {
-        pageHeader.classList.remove('page__closed');
-        pageHeader.classList.add('page__opened');
-        mainPage.classList.add('page__hidden');
-      } else {
-        pageHeader.classList.add('page__closed');
-        pageHeader.classList.remove('page__opened');
-        mainPage.classList.remove('page__hidden');
-      }
-    });
-  }
+  //   pageToggle.addEventListener('click', function () {
+  //     if (pageHeader.classList.contains('page__closed')) {
+  //       pageHeader.classList.remove('page__closed');
+  //       pageHeader.classList.add('page__opened');
+  //       mainPage.classList.add('page__hidden');
+  //     } else {
+  //       pageHeader.classList.add('page__closed');
+  //       pageHeader.classList.remove('page__opened');
+  //       mainPage.classList.remove('page__hidden');
+  //     }
+  //   });
+  // }
 })();
